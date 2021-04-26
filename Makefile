@@ -1,5 +1,5 @@
 .PHONY: run
-run: setup-server #setup-client
+run: setup-server setup-client
 
 .PHONY: setup-server
 setup-server: protoc-for-go install-go-module
@@ -19,9 +19,9 @@ install-go-module:
 	(cd server && go mod tidy)
 
 
-# .PHONY: setup-client
-# setup-client: protoc-for-csharp
+.PHONY: setup-client
+setup-client: protoc-for-csharp
 
-# .PHONY: protoc-for-csharp
-#  protoc-for-csharp:
-# 	protoc -I ./proto --csharp_out=./client/pb ./proto/*.proto
+.PHONY: protoc-for-csharp
+ protoc-for-csharp:
+	protoc -I ./proto --csharp_out=./client/pb ./proto/*.proto
