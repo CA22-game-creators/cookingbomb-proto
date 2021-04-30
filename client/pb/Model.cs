@@ -24,14 +24,14 @@ namespace Proto {
     static ModelReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgttb2RlbC5wcm90bxIFcHJvdG8iMwoEVXNlchIKCgJpZBgBIAEoCRIMCgRu",
-            "YW1lGAIgASgJEhEKCWF1dGhUb2tlbhgDIAEoCUI3WjVnaXRodWIuY29tL0NB",
-            "MjItZ2FtZS1jcmVhdG9ycy9jb29raW5nYm9tYi1wcm90by9wcm90b2IGcHJv",
-            "dG8z"));
+            "Cgttb2RlbC5wcm90bxIFcHJvdG8aD3ZhbGlkYXRvci5wcm90byIyCgRVc2Vy",
+            "EhIKAmlkGAEgASgJQgb66TACCBoSFgoEbmFtZRgCIAEoCUII+ukwBBACGDJC",
+            "N1o1Z2l0aHViLmNvbS9DQTIyLWdhbWUtY3JlYXRvcnMvY29va2luZ2JvbWIt",
+            "cHJvdG8vcHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Proto.ValidatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.User), global::Proto.User.Parser, new[]{ "Id", "Name", "AuthToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.User), global::Proto.User.Parser, new[]{ "Id", "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -69,7 +69,6 @@ namespace Proto {
     public User(User other) : this() {
       id_ = other.id_;
       name_ = other.name_;
-      authToken_ = other.authToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -100,17 +99,6 @@ namespace Proto {
       }
     }
 
-    /// <summary>Field number for the "authToken" field.</summary>
-    public const int AuthTokenFieldNumber = 3;
-    private string authToken_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string AuthToken {
-      get { return authToken_; }
-      set {
-        authToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as User);
@@ -126,7 +114,6 @@ namespace Proto {
       }
       if (Id != other.Id) return false;
       if (Name != other.Name) return false;
-      if (AuthToken != other.AuthToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -135,7 +122,6 @@ namespace Proto {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (AuthToken.Length != 0) hash ^= AuthToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -160,10 +146,6 @@ namespace Proto {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (AuthToken.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(AuthToken);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -181,10 +163,6 @@ namespace Proto {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (AuthToken.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(AuthToken);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -199,9 +177,6 @@ namespace Proto {
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (AuthToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -219,9 +194,6 @@ namespace Proto {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
-      }
-      if (other.AuthToken.Length != 0) {
-        AuthToken = other.AuthToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -245,10 +217,6 @@ namespace Proto {
             Name = input.ReadString();
             break;
           }
-          case 26: {
-            AuthToken = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -269,10 +237,6 @@ namespace Proto {
           }
           case 18: {
             Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            AuthToken = input.ReadString();
             break;
           }
         }

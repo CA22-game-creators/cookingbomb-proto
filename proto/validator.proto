@@ -1,0 +1,16 @@
+syntax = "proto3";
+option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto";
+package proto;
+
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.FieldOptions {
+    StringOpts stringOpts = 99999;
+}
+
+message StringOpts {
+    optional int32 len = 1;
+    optional int32 max_len = 2;
+    optional int32 min_len = 3;
+    optional string regexp = 4;
+}
