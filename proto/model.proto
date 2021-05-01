@@ -8,5 +8,4 @@ message User {
     string id = 1;
     string name = 2 [ (stringOpts) = {max_len : 1, min_len : 10} ];
     string authToken = 3;
-
 }
