@@ -1,0 +1,19 @@
+.PHONY: run
+run: setup-server setup-client
+
+.PHONY: setup-server
+setup-server:
+	protoc -I ./proto \
+	--go_out=./server/pb \
+	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto \
+	--go-grpc_out=./server/pb \
+	--go-grpc_opt=require_unimplemented_servers=false \
+	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto \
+	./proto/*.proto
+	(cd server && go mod tidy)
+
+
+# TODO クライアントコードの自動生成コマンド実装
+.PHONY: setup-client
+setup-client:
+#	protoc -I ./proto --csharp_out=./client/pb ./proto/*.proto
