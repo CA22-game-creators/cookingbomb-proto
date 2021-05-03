@@ -3,9 +3,10 @@ option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto";
 package proto;
 
 import "model.proto";
+import "option.proto";
 
 message SignupRequest {
-    string name = 1;
+    string name = 1 [ (stringOpts) = {max_len : 1, min_len : 10} ];
 }
 
 message SignupResponse {
