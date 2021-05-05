@@ -10,5 +10,5 @@ message SignupRequest {
 }
 
 message SignupResponse {
-    User user = 1;
+    Accout user = 1;
 }
