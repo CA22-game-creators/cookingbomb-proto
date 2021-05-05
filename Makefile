@@ -12,8 +12,6 @@ setup-server:
 	./proto/*.proto
 	go mod tidy
 
-
-
 # TODO クライアントコードの自動生成コマンド実装
 .PHONY: setup-client
 setup-client:
