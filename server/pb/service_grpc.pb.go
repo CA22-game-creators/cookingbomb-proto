@@ -14,84 +14,84 @@ import (
 // Requires gRPC-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
-// UserServicesClient is the client API for UserServices service.
+// AccountServicesClient is the client API for AccountServices service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type UserServicesClient interface {
+type AccountServicesClient interface {
 	Signup(ctx context.Context, in *SignupRequest, opts ...grpc.CallOption) (*SignupResponse, error)
 }
 
-type userServicesClient struct {
+type accountServicesClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewUserServicesClient(cc grpc.ClientConnInterface) UserServicesClient {
-	return &userServicesClient{cc}
+func NewAccountServicesClient(cc grpc.ClientConnInterface) AccountServicesClient {
+	return &accountServicesClient{cc}
 }
 
-func (c *userServicesClient) Signup(ctx context.Context, in *SignupRequest, opts ...grpc.CallOption) (*SignupResponse, error) {
+func (c *accountServicesClient) Signup(ctx context.Context, in *SignupRequest, opts ...grpc.CallOption) (*SignupResponse, error) {
 	out := new(SignupResponse)
-	err := c.cc.Invoke(ctx, "/proto.UserServices/Signup", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.AccountServices/Signup", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// UserServicesServer is the server API for UserServices service.
-// All implementations should embed UnimplementedUserServicesServer
+// AccountServicesServer is the server API for AccountServices service.
+// All implementations should embed UnimplementedAccountServicesServer
 // for forward compatibility
-type UserServicesServer interface {
+type AccountServicesServer interface {
 	Signup(context.Context, *SignupRequest) (*SignupResponse, error)
 }
 
-// UnimplementedUserServicesServer should be embedded to have forward compatible implementations.
-type UnimplementedUserServicesServer struct {
+// UnimplementedAccountServicesServer should be embedded to have forward compatible implementations.
+type UnimplementedAccountServicesServer struct {
 }
 
-func (UnimplementedUserServicesServer) Signup(context.Context, *SignupRequest) (*SignupResponse, error) {
+func (UnimplementedAccountServicesServer) Signup(context.Context, *SignupRequest) (*SignupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Signup not implemented")
 }
 
-// UnsafeUserServicesServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to UserServicesServer will
+// UnsafeAccountServicesServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to AccountServicesServer will
 // result in compilation errors.
-type UnsafeUserServicesServer interface {
-	mustEmbedUnimplementedUserServicesServer()
+type UnsafeAccountServicesServer interface {
+	mustEmbedUnimplementedAccountServicesServer()
 }
 
-func RegisterUserServicesServer(s grpc.ServiceRegistrar, srv UserServicesServer) {
-	s.RegisterService(&UserServices_ServiceDesc, srv)
+func RegisterAccountServicesServer(s grpc.ServiceRegistrar, srv AccountServicesServer) {
+	s.RegisterService(&AccountServices_ServiceDesc, srv)
 }
 
-func _UserServices_Signup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AccountServices_Signup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SignupRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServicesServer).Signup(ctx, in)
+		return srv.(AccountServicesServer).Signup(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.UserServices/Signup",
+		FullMethod: "/proto.AccountServices/Signup",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServicesServer).Signup(ctx, req.(*SignupRequest))
+		return srv.(AccountServicesServer).Signup(ctx, req.(*SignupRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// UserServices_ServiceDesc is the grpc.ServiceDesc for UserServices service.
+// AccountServices_ServiceDesc is the grpc.ServiceDesc for AccountServices service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var UserServices_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.UserServices",
-	HandlerType: (*UserServicesServer)(nil),
+var AccountServices_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.AccountServices",
+	HandlerType: (*AccountServicesServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "Signup",
-			Handler:    _UserServices_Signup_Handler,
+			Handler:    _AccountServices_Signup_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
