@@ -4,9 +4,9 @@ run: setup-server setup-client
 .PHONY: setup-server
 setup-server:
 	protoc -I ./proto \
-	--go_out=./server/pb \
+	--go_out=. \
 	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto \
-	--go-grpc_out=./server/pb \
+	--go-grpc_out=. \
 	--go-grpc_opt=require_unimplemented_servers=false \
 	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto \
 	./proto/*.proto
