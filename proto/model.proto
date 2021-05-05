@@ -4,7 +4,7 @@ package proto;
 
 // import "option.proto";
 
-message Accout {
+message Account {
     string id = 1;
     string authToken = 2;
 }
