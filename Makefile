@@ -10,8 +10,7 @@ setup-server:
 	--go-grpc_opt=require_unimplemented_servers=false \
 	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto \
 	./proto/*.proto
-	(cd server && go mod tidy)
-
+	go mod tidy
 
 # TODO クライアントコードの自動生成コマンド実装
 .PHONY: setup-client
