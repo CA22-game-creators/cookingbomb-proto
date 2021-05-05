@@ -1,4 +1,4 @@
-module github.com/CA22-game-creators/cookingbomb-proto
+module github.com/CA22-game-creators/cookingbomb-proto/server/pb
 
 go 1.16
 
