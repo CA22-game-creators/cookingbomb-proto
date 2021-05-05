@@ -6,7 +6,8 @@ package proto;
 
 message Account {
     string id = 1;
-    string authToken = 2;
+    string name = 2;
+    string authToken = 3;
 }
 
 // TODO
