@@ -2,16 +2,8 @@ syntax = "proto3";
 option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto";
 package proto;
 
-// import "option.proto";
-
 message Account {
     string id = 1;
     string name = 2;
     string authToken = 3;
 }
-
-// TODO
-// message UserInfo {
-//     string id = 1;
-//     string name = 2 [ (stringOpts) = {min_len : 1, max_len : 10} ];
-// }
