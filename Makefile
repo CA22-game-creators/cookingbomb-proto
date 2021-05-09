@@ -3,7 +3,7 @@ run: setup-server setup-client
 
 .PHONY: setup-server
 setup-server:
-	protoc -I ./proto \
+	protoc \
 	--go_out=./server/pb \
 	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto \
 	--go-grpc_out=./server/pb \
