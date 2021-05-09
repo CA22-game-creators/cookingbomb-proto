@@ -1,0 +1,26 @@
+syntax = "proto3";
+option go_package = "github.com/CA22-game-creators/cookingbomb-proto/test/testdata";
+package proto;
+
+import "proto/option.proto";
+
+message String {
+  string value = 1;
+}
+
+message StringLimitMinLen {
+  string value = 1 [ (proto.stringOpts) = {min_len : 5} ];
+}
+
+message StringLimitMaxLen {
+  string value = 1 [ (proto.stringOpts) = {max_len : 10} ];
+}
+
+message StringLimitLenRange {
+  string value = 1 [ (proto.stringOpts) = {min_len : 5, max_len : 10} ];
+}
+
+message StringMulti {
+  string value1 = 1 [ (proto.stringOpts) = {min_len : 5, max_len : 10} ];
+  string value2 = 2 [ (proto.stringOpts) = {min_len : 5, max_len : 10} ];
+}
