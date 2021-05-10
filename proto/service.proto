@@ -5,5 +5,5 @@ package proto;
 import "proto/message.proto";
 
 service AccountServices {
-    rpc Signup(SignupRequest) returns (SignupResponse);
+  rpc Signup(SignupRequest) returns (SignupResponse);
 }

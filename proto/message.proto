@@ -6,9 +6,9 @@ import "proto/model.proto";
 import "proto/option.proto";
 
 message SignupRequest {
-    string name = 1 [ (stringOpts) = {min_len : 1, max_len : 10} ];
+  string name = 1 [ (stringOpts) = {min_len : 1, max_len : 10} ];
 }
 
 message SignupResponse {
-    Account account = 1;
+  Account account = 1;
 }
