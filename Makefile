@@ -15,19 +15,15 @@ setup-server:
 .PHONY: setup-server-test
 setup-server-test:
 	protoc \
-	--go_out=test/testdata/pb \
+	--go_out=./test/testdata/pb \
 	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/test/testdata \
+	--go_opt=Mproto/option.proto=github.com/CA22-game-creators/cookingbomb-proto/server/pb \
 	./test/testdata/*.proto
-	sed -i '' -e \
-	's|github.com/CA22-game-creators/cookingbomb-proto/proto|\
-	github.com/CA22-game-creators/cookingbomb-proto/server/pb|' \
-	./test/testdata/pb/*.go
 
 # TODO クライアントコードの自動生成コマンド実装
 .PHONY: setup-client
 setup-client:
 #	protoc -I ./proto --csharp_out=./client/pb ./proto/*.proto
-
 
 .PHONY: test
 test:
