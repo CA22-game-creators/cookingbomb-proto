@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto";
+option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto/game";
 package proto;
 
 import "proto/game/message.proto";

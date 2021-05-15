@@ -16,10 +16,10 @@ setup-server:
 setup-game-server:
 	protoc \
 	--go_out=./server/game/pb \
-	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto \
+	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/game \
 	--go-grpc_out=./server/game/pb \
 	--go-grpc_opt=require_unimplemented_servers=false \
-	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto \
+	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/game \
 	./proto/game/*.proto
 	go mod tidy
 
