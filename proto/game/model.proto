@@ -12,8 +12,8 @@ enum ConnectionStatusEnum {
   DISCONNECTED_BY_CLIENT    = 3;  //クライアント側からの要求によって、切断された
   DISCONNECTED_BY_SERVER    = 4;  //ゲーム終了等の理由により、サーバー側から切断された
   DISCONNECTED              = 5;  //上記以外の理由により、切断された
-  
-  CONNECTION_FAIL           = 6;  //CONNECTIONGから遷移する 接続要求は失敗した
+
+  CONNECTION_FAIL           = 6;  //CONNECTINGから遷移する 接続要求は失敗した
 }
 
 message Character {

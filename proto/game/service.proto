@@ -6,7 +6,7 @@ import "proto/game/message.proto";
 
 service AccountServices {
   rpc Connect(ConnectRequest) returns (ConnectionStatus);
-  rpc DisConnect(ConnectRequest) returns (ConnectionStatus);
+  rpc Disconnect(ConnectRequest) returns (ConnectionStatus);
   rpc GetConnectionStatus(ConnectRequest) returns (ConnectionStatus);
 
   rpc CharacterDataStream(stream CharacterData) returns (stream CharacterDataList);

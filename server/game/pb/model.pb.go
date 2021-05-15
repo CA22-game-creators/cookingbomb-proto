@@ -30,7 +30,7 @@ const (
 	ConnectionStatusEnum_DISCONNECTED_BY_CLIENT ConnectionStatusEnum = 3 //クライアント側からの要求によって、切断された
 	ConnectionStatusEnum_DISCONNECTED_BY_SERVER ConnectionStatusEnum = 4 //ゲーム終了等の理由により、サーバー側から切断された
 	ConnectionStatusEnum_DISCONNECTED           ConnectionStatusEnum = 5 //上記以外の理由により、切断された
-	ConnectionStatusEnum_CONNECTION_FAIL        ConnectionStatusEnum = 6 //CONNECTIONGから遷移する 接続要求は失敗した
+	ConnectionStatusEnum_CONNECTION_FAIL        ConnectionStatusEnum = 6 //CONNECTINGから遷移する 接続要求は失敗した
 )
 
 // Enum value maps for ConnectionStatusEnum.

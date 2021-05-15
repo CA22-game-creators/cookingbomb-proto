@@ -19,7 +19,8 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type AccountServicesClient interface {
 	Connect(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error)
-	DisConnect(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error)
+	Disconnect(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error)
+	GetConnectionStatus(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error)
 	CharacterDataStream(ctx context.Context, opts ...grpc.CallOption) (AccountServices_CharacterDataStreamClient, error)
 }
 
@@ -40,9 +41,18 @@ func (c *accountServicesClient) Connect(ctx context.Context, in *ConnectRequest,
 	return out, nil
 }
 
-func (c *accountServicesClient) DisConnect(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error) {
+func (c *accountServicesClient) Disconnect(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error) {
 	out := new(ConnectionStatus)
-	err := c.cc.Invoke(ctx, "/proto.AccountServices/DisConnect", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.AccountServices/Disconnect", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *accountServicesClient) GetConnectionStatus(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error) {
+	out := new(ConnectionStatus)
+	err := c.cc.Invoke(ctx, "/proto.AccountServices/GetConnectionStatus", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -85,7 +95,8 @@ func (x *accountServicesCharacterDataStreamClient) Recv() (*CharacterDataList, e
 // for forward compatibility
 type AccountServicesServer interface {
 	Connect(context.Context, *ConnectRequest) (*ConnectionStatus, error)
-	DisConnect(context.Context, *ConnectRequest) (*ConnectionStatus, error)
+	Disconnect(context.Context, *ConnectRequest) (*ConnectionStatus, error)
+	GetConnectionStatus(context.Context, *ConnectRequest) (*ConnectionStatus, error)
 	CharacterDataStream(AccountServices_CharacterDataStreamServer) error
 }
 
@@ -96,8 +107,11 @@ type UnimplementedAccountServicesServer struct {
 func (UnimplementedAccountServicesServer) Connect(context.Context, *ConnectRequest) (*ConnectionStatus, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Connect not implemented")
 }
-func (UnimplementedAccountServicesServer) DisConnect(context.Context, *ConnectRequest) (*ConnectionStatus, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method DisConnect not implemented")
+func (UnimplementedAccountServicesServer) Disconnect(context.Context, *ConnectRequest) (*ConnectionStatus, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Disconnect not implemented")
+}
+func (UnimplementedAccountServicesServer) GetConnectionStatus(context.Context, *ConnectRequest) (*ConnectionStatus, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetConnectionStatus not implemented")
 }
 func (UnimplementedAccountServicesServer) CharacterDataStream(AccountServices_CharacterDataStreamServer) error {
 	return status.Errorf(codes.Unimplemented, "method CharacterDataStream not implemented")
@@ -132,20 +146,38 @@ func _AccountServices_Connect_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AccountServices_DisConnect_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AccountServices_Disconnect_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ConnectRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AccountServicesServer).DisConnect(ctx, in)
+		return srv.(AccountServicesServer).Disconnect(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.AccountServices/DisConnect",
+		FullMethod: "/proto.AccountServices/Disconnect",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccountServicesServer).DisConnect(ctx, req.(*ConnectRequest))
+		return srv.(AccountServicesServer).Disconnect(ctx, req.(*ConnectRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AccountServices_GetConnectionStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ConnectRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AccountServicesServer).GetConnectionStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.AccountServices/GetConnectionStatus",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AccountServicesServer).GetConnectionStatus(ctx, req.(*ConnectRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -188,8 +220,12 @@ var AccountServices_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _AccountServices_Connect_Handler,
 		},
 		{
-			MethodName: "DisConnect",
-			Handler:    _AccountServices_DisConnect_Handler,
+			MethodName: "Disconnect",
+			Handler:    _AccountServices_Disconnect_Handler,
+		},
+		{
+			MethodName: "GetConnectionStatus",
+			Handler:    _AccountServices_GetConnectionStatus_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
