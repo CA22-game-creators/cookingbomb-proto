@@ -1,0 +1,25 @@
+syntax = "proto3";
+option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto";
+package proto;
+
+import "google/protobuf/timestamp.proto";
+import "proto/game/model.proto";
+
+message ConnectRequest {
+  string sessionToken = 1;
+}
+
+message ConnectionStatus {
+  ConnectionStatusEnum status = 1;
+}
+
+message CharacterData {
+  string sessionToken = 1;
+  Character data = 2;
+  google.protobuf.Timestamp send_time = 3;
+}
+
+message CharacterDataList {
+  repeated Character datas = 1;
+  google.protobuf.Timestamp send_time = 2;
+}
