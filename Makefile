@@ -31,10 +31,10 @@ setup-server-test:
 	--go_opt=Mproto/option.proto=github.com/CA22-game-creators/cookingbomb-proto/server/pb \
 	./test/testdata/*.proto
 
-# TODO クライアントコードの自動生成コマンド実装
 .PHONY: setup-client
 setup-client:
-#	protoc -I ./proto --csharp_out=./client/pb ./proto/*.proto
+	protoc --csharp_out=./client/pb ./proto/*.proto
+	protoc --csharp_out=./client/pb/game ./proto/game/*.proto
 
 .PHONY: test
 test:
