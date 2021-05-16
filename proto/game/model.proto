@@ -20,12 +20,11 @@ message Character {
   string id = 1;
   string name = 2;
   bool is_active = 3;
-  reserved 4 to 8;  //多分もたせる状態が増えそうなので、確保する(キャラとかね)
 
-  google.protobuf.Timestamp update_time = 9;
+  google.protobuf.Timestamp update_time = 4;
 
-  Vector3 Position = 10;
-  Vector3 Rotation = 11;
+  Vector3 position = 5;
+  Vector3 rotation = 6;
 
   message Vector3 {
     float x = 1;
