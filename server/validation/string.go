@@ -6,7 +6,7 @@ import (
 
 	"google.golang.org/protobuf/reflect/protoreflect"
 
-	pb "github.com/CA22-game-creators/cookingbomb-proto/server/pb"
+	pb "github.com/CA22-game-creators/cookingbomb-proto/server/pb/common"
 )
 
 func validateString(fieldName protoreflect.Name, opts *pb.StringOpts, v string) error {
