@@ -1,0 +1,13 @@
+syntax = "proto3";
+option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto/game";
+package proto;
+
+import "proto/game/message.proto";
+
+service AccountServices {
+  rpc Connect(ConnectRequest) returns (ConnectionStatus);
+  rpc Disconnect(ConnectRequest) returns (ConnectionStatus);
+  rpc GetConnectionStatus(ConnectRequest) returns (ConnectionStatus);
+
+  rpc CharacterDataStream(stream CharacterData) returns (stream CharacterDataList);
+}
