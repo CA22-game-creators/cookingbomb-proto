@@ -2,7 +2,7 @@ syntax = "proto3";
 option go_package = "github.com/CA22-game-creators/cookingbomb-proto/test/testdata";
 package proto;
 
-import "proto/option.proto";
+import "proto/common/option.proto";
 
 message String {
   string value = 1;

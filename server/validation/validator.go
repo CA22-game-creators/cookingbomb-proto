@@ -7,7 +7,7 @@ import (
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"google.golang.org/protobuf/types/descriptorpb"
 
-	pb "github.com/CA22-game-creators/cookingbomb-proto/server/pb"
+	pb "github.com/CA22-game-creators/cookingbomb-proto/server/pb/common"
 )
 
 func Validate(pb proto.Message) error {
