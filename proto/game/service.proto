@@ -4,7 +4,7 @@ package proto;
 
 import "proto/game/message.proto";
 
-service AccountServices {
+service GameServices {
   rpc Connect(ConnectionRequest) returns (ConnectionResponse);
   rpc Disconnect(ConnectionRequest) returns (ConnectionResponse);
   rpc GetConnectionStatus(ConnectionRequest) returns (ConnectionResponse);
