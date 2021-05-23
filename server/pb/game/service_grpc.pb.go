@@ -18,10 +18,10 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type AccountServicesClient interface {
-	Connect(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error)
-	Disconnect(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error)
-	GetConnectionStatus(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error)
-	CharacterDataStream(ctx context.Context, opts ...grpc.CallOption) (AccountServices_CharacterDataStreamClient, error)
+	Connect(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error)
+	Disconnect(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error)
+	GetConnectionStatus(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error)
+	GameDataStream(ctx context.Context, opts ...grpc.CallOption) (AccountServices_GameDataStreamClient, error)
 }
 
 type accountServicesClient struct {
@@ -32,8 +32,8 @@ func NewAccountServicesClient(cc grpc.ClientConnInterface) AccountServicesClient
 	return &accountServicesClient{cc}
 }
 
-func (c *accountServicesClient) Connect(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error) {
-	out := new(ConnectionStatus)
+func (c *accountServicesClient) Connect(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error) {
+	out := new(ConnectionResponse)
 	err := c.cc.Invoke(ctx, "/proto.AccountServices/Connect", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -41,8 +41,8 @@ func (c *accountServicesClient) Connect(ctx context.Context, in *ConnectRequest,
 	return out, nil
 }
 
-func (c *accountServicesClient) Disconnect(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error) {
-	out := new(ConnectionStatus)
+func (c *accountServicesClient) Disconnect(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error) {
+	out := new(ConnectionResponse)
 	err := c.cc.Invoke(ctx, "/proto.AccountServices/Disconnect", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -50,8 +50,8 @@ func (c *accountServicesClient) Disconnect(ctx context.Context, in *ConnectReque
 	return out, nil
 }
 
-func (c *accountServicesClient) GetConnectionStatus(ctx context.Context, in *ConnectRequest, opts ...grpc.CallOption) (*ConnectionStatus, error) {
-	out := new(ConnectionStatus)
+func (c *accountServicesClient) GetConnectionStatus(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error) {
+	out := new(ConnectionResponse)
 	err := c.cc.Invoke(ctx, "/proto.AccountServices/GetConnectionStatus", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -59,31 +59,31 @@ func (c *accountServicesClient) GetConnectionStatus(ctx context.Context, in *Con
 	return out, nil
 }
 
-func (c *accountServicesClient) CharacterDataStream(ctx context.Context, opts ...grpc.CallOption) (AccountServices_CharacterDataStreamClient, error) {
-	stream, err := c.cc.NewStream(ctx, &AccountServices_ServiceDesc.Streams[0], "/proto.AccountServices/CharacterDataStream", opts...)
+func (c *accountServicesClient) GameDataStream(ctx context.Context, opts ...grpc.CallOption) (AccountServices_GameDataStreamClient, error) {
+	stream, err := c.cc.NewStream(ctx, &AccountServices_ServiceDesc.Streams[0], "/proto.AccountServices/GameDataStream", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &accountServicesCharacterDataStreamClient{stream}
+	x := &accountServicesGameDataStreamClient{stream}
 	return x, nil
 }
 
-type AccountServices_CharacterDataStreamClient interface {
-	Send(*CharacterData) error
-	Recv() (*CharacterDataList, error)
+type AccountServices_GameDataStreamClient interface {
+	Send(*GameDataRequest) error
+	Recv() (*GameDataResponse, error)
 	grpc.ClientStream
 }
 
-type accountServicesCharacterDataStreamClient struct {
+type accountServicesGameDataStreamClient struct {
 	grpc.ClientStream
 }
 
-func (x *accountServicesCharacterDataStreamClient) Send(m *CharacterData) error {
+func (x *accountServicesGameDataStreamClient) Send(m *GameDataRequest) error {
 	return x.ClientStream.SendMsg(m)
 }
 
-func (x *accountServicesCharacterDataStreamClient) Recv() (*CharacterDataList, error) {
-	m := new(CharacterDataList)
+func (x *accountServicesGameDataStreamClient) Recv() (*GameDataResponse, error) {
+	m := new(GameDataResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
@@ -94,27 +94,27 @@ func (x *accountServicesCharacterDataStreamClient) Recv() (*CharacterDataList, e
 // All implementations should embed UnimplementedAccountServicesServer
 // for forward compatibility
 type AccountServicesServer interface {
-	Connect(context.Context, *ConnectRequest) (*ConnectionStatus, error)
-	Disconnect(context.Context, *ConnectRequest) (*ConnectionStatus, error)
-	GetConnectionStatus(context.Context, *ConnectRequest) (*ConnectionStatus, error)
-	CharacterDataStream(AccountServices_CharacterDataStreamServer) error
+	Connect(context.Context, *ConnectionRequest) (*ConnectionResponse, error)
+	Disconnect(context.Context, *ConnectionRequest) (*ConnectionResponse, error)
+	GetConnectionStatus(context.Context, *ConnectionRequest) (*ConnectionResponse, error)
+	GameDataStream(AccountServices_GameDataStreamServer) error
 }
 
 // UnimplementedAccountServicesServer should be embedded to have forward compatible implementations.
 type UnimplementedAccountServicesServer struct {
 }
 
-func (UnimplementedAccountServicesServer) Connect(context.Context, *ConnectRequest) (*ConnectionStatus, error) {
+func (UnimplementedAccountServicesServer) Connect(context.Context, *ConnectionRequest) (*ConnectionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Connect not implemented")
 }
-func (UnimplementedAccountServicesServer) Disconnect(context.Context, *ConnectRequest) (*ConnectionStatus, error) {
+func (UnimplementedAccountServicesServer) Disconnect(context.Context, *ConnectionRequest) (*ConnectionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Disconnect not implemented")
 }
-func (UnimplementedAccountServicesServer) GetConnectionStatus(context.Context, *ConnectRequest) (*ConnectionStatus, error) {
+func (UnimplementedAccountServicesServer) GetConnectionStatus(context.Context, *ConnectionRequest) (*ConnectionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConnectionStatus not implemented")
 }
-func (UnimplementedAccountServicesServer) CharacterDataStream(AccountServices_CharacterDataStreamServer) error {
-	return status.Errorf(codes.Unimplemented, "method CharacterDataStream not implemented")
+func (UnimplementedAccountServicesServer) GameDataStream(AccountServices_GameDataStreamServer) error {
+	return status.Errorf(codes.Unimplemented, "method GameDataStream not implemented")
 }
 
 // UnsafeAccountServicesServer may be embedded to opt out of forward compatibility for this service.
@@ -129,7 +129,7 @@ func RegisterAccountServicesServer(s grpc.ServiceRegistrar, srv AccountServicesS
 }
 
 func _AccountServices_Connect_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ConnectRequest)
+	in := new(ConnectionRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -141,13 +141,13 @@ func _AccountServices_Connect_Handler(srv interface{}, ctx context.Context, dec 
 		FullMethod: "/proto.AccountServices/Connect",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccountServicesServer).Connect(ctx, req.(*ConnectRequest))
+		return srv.(AccountServicesServer).Connect(ctx, req.(*ConnectionRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _AccountServices_Disconnect_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ConnectRequest)
+	in := new(ConnectionRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -159,13 +159,13 @@ func _AccountServices_Disconnect_Handler(srv interface{}, ctx context.Context, d
 		FullMethod: "/proto.AccountServices/Disconnect",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccountServicesServer).Disconnect(ctx, req.(*ConnectRequest))
+		return srv.(AccountServicesServer).Disconnect(ctx, req.(*ConnectionRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _AccountServices_GetConnectionStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ConnectRequest)
+	in := new(ConnectionRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -177,31 +177,31 @@ func _AccountServices_GetConnectionStatus_Handler(srv interface{}, ctx context.C
 		FullMethod: "/proto.AccountServices/GetConnectionStatus",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccountServicesServer).GetConnectionStatus(ctx, req.(*ConnectRequest))
+		return srv.(AccountServicesServer).GetConnectionStatus(ctx, req.(*ConnectionRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AccountServices_CharacterDataStream_Handler(srv interface{}, stream grpc.ServerStream) error {
-	return srv.(AccountServicesServer).CharacterDataStream(&accountServicesCharacterDataStreamServer{stream})
+func _AccountServices_GameDataStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(AccountServicesServer).GameDataStream(&accountServicesGameDataStreamServer{stream})
 }
 
-type AccountServices_CharacterDataStreamServer interface {
-	Send(*CharacterDataList) error
-	Recv() (*CharacterData, error)
+type AccountServices_GameDataStreamServer interface {
+	Send(*GameDataResponse) error
+	Recv() (*GameDataRequest, error)
 	grpc.ServerStream
 }
 
-type accountServicesCharacterDataStreamServer struct {
+type accountServicesGameDataStreamServer struct {
 	grpc.ServerStream
 }
 
-func (x *accountServicesCharacterDataStreamServer) Send(m *CharacterDataList) error {
+func (x *accountServicesGameDataStreamServer) Send(m *GameDataResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func (x *accountServicesCharacterDataStreamServer) Recv() (*CharacterData, error) {
-	m := new(CharacterData)
+func (x *accountServicesGameDataStreamServer) Recv() (*GameDataRequest, error) {
+	m := new(GameDataRequest)
 	if err := x.ServerStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
@@ -230,8 +230,8 @@ var AccountServices_ServiceDesc = grpc.ServiceDesc{
 	},
 	Streams: []grpc.StreamDesc{
 		{
-			StreamName:    "CharacterDataStream",
-			Handler:       _AccountServices_CharacterDataStream_Handler,
+			StreamName:    "GameDataStream",
+			Handler:       _AccountServices_GameDataStream_Handler,
 			ServerStreams: true,
 			ClientStreams: true,
 		},

@@ -5,21 +5,29 @@ package proto;
 import "google/protobuf/timestamp.proto";
 import "proto/game/model.proto";
 
-message ConnectRequest {
+message ConnectionRequest {
   string sessionToken = 1;
 }
 
-message ConnectionStatus {
+message ConnectionResponse {
   ConnectionStatusEnum status = 1;
 }
 
-message CharacterData {
+message GameDataRequest {
   string sessionToken = 1;
-  Character data = 2;
-  google.protobuf.Timestamp send_time = 3;
+
+  oneof message {
+    Character character_update = 2;
+  }
+
+  google.protobuf.Timestamp client_time = 3;
 }
 
-message CharacterDataList {
-  repeated Character datas = 1;
-  google.protobuf.Timestamp send_time = 2;
+message GameDataResponse {
+
+  oneof message {
+    Characters character_datas = 1;
+  }
+
+  google.protobuf.Timestamp server_time = 2;
 }
