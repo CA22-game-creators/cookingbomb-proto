@@ -2,7 +2,7 @@ syntax = "proto3";
 option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto/game";
 package proto;
 
-import "google/protobuf/timestamp.proto";
+// import "google/protobuf/timestamp.proto";
 import "proto/game/model.proto";
 
 message ConnectionRequest {
@@ -19,8 +19,6 @@ message GameDataRequest {
   oneof message {
     Character character_update = 2;
   }
-
-  google.protobuf.Timestamp client_time = 3;
 }
 
 message GameDataResponse {
@@ -29,5 +27,6 @@ message GameDataResponse {
     Characters character_datas = 1;
   }
 
-  google.protobuf.Timestamp server_time = 2;
+  // ASK: ラグ計算に必要？
+  // google.protobuf.Timestamp server_time = 2;
 }
