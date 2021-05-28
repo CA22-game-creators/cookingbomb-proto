@@ -3,6 +3,7 @@ option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto/game"
 package proto;
 
 import "google/protobuf/timestamp.proto";
+import "proto/game/structure.proto";
 
 enum ConnectionStatusEnum {
   CONNECTION_UNSPECIFIED    = 0;  //初期値 正常でない値 接続できていないと考えて良い
@@ -16,19 +17,17 @@ enum ConnectionStatusEnum {
   CONNECTION_FAIL           = 6;  //CONNECTINGから遷移する 接続要求は失敗した
 }
 
+message Characters {
+  repeated Character characters= 1;
+}
+
 message Character {
   string id = 1;
-  string name = 2;
-  bool is_active = 3;
+  bool is_active = 2;
 
-  google.protobuf.Timestamp update_time = 4;
+  Position position = 3;
+  Rotation rotation = 4;
+  Verocity verocity = 5;
 
-  Vector3 position = 5;
-  Vector3 rotation = 6;
-
-  message Vector3 {
-    float x = 1;
-    float y = 2;
-    float z = 3;
-  }
+  google.protobuf.Timestamp update_time = 6;
 }

@@ -4,10 +4,10 @@ package proto;
 
 import "proto/game/message.proto";
 
-service AccountServices {
-  rpc Connect(ConnectRequest) returns (ConnectionStatus);
-  rpc Disconnect(ConnectRequest) returns (ConnectionStatus);
-  rpc GetConnectionStatus(ConnectRequest) returns (ConnectionStatus);
+service GameServices {
+  rpc Connect(ConnectionRequest) returns (ConnectionResponse);
+  rpc Disconnect(ConnectionRequest) returns (ConnectionResponse);
+  rpc GetConnectionStatus(ConnectionRequest) returns (ConnectionResponse);
 
-  rpc CharacterDataStream(stream CharacterData) returns (stream CharacterDataList);
+  rpc GameDataStream(stream GameDataRequest) returns (stream GameDataResponse);
 }

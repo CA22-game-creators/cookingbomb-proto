@@ -1,0 +1,22 @@
+syntax = "proto3";
+option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto/game";
+package proto;
+
+message Position {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+}
+
+message Rotation {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+  float w = 4;
+}
+
+message Verocity {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+}
