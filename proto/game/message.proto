@@ -27,6 +27,5 @@ message GameDataResponse {
     Characters character_datas = 1;
   }
 
-  // ASK: ラグ計算に必要？
-  // google.protobuf.Timestamp server_time = 2;
+  google.protobuf.Timestamp server_time = 2;
 }
