@@ -2,7 +2,7 @@ syntax = "proto3";
 option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto/game";
 package proto;
 
-// import "google/protobuf/timestamp.proto";
+import "google/protobuf/timestamp.proto";
 import "proto/game/model.proto";
 
 message ConnectionRequest {
