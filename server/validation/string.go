@@ -46,7 +46,7 @@ func validateRegexp(opts *pb.StringOpts, v string) error {
 		return errors.New(err.Error())
 	}
 	if !isValid {
-		return errors.New("invalid string")
+		return errors.New("invalid format")
 	}
 
 	return nil

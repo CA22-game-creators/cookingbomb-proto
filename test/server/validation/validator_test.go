@@ -56,7 +56,7 @@ func TestValidate(t *testing.T) {
 			title: "【異常系】文字列フィールドでformatが異常",
 			input: &tdPb.StringRegexp{Value: "invalid_uuid"},
 			expected: errors.New(
-				"value:invalid string",
+				"value:invalid format",
 			),
 		},
 		{
