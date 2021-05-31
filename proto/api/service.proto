@@ -6,4 +6,6 @@ import "proto/api/message.proto";
 
 service AccountServices {
   rpc Signup(SignupRequest) returns (SignupResponse);
+  rpc GetSessionToken(GetSessionTokenRequest) returns (GetSessionTokenResponse);
+  rpc GetAccountInfo(GetAccountInfoRequest) returns (GetAccountInfoResponse);
 }

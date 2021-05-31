@@ -19,6 +19,8 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type AccountServicesClient interface {
 	Signup(ctx context.Context, in *SignupRequest, opts ...grpc.CallOption) (*SignupResponse, error)
+	GetSessionToken(ctx context.Context, in *GetSessionTokenRequest, opts ...grpc.CallOption) (*GetSessionTokenResponse, error)
+	GetAccountInfo(ctx context.Context, in *GetAccountInfoRequest, opts ...grpc.CallOption) (*GetAccountInfoResponse, error)
 }
 
 type accountServicesClient struct {
@@ -38,11 +40,31 @@ func (c *accountServicesClient) Signup(ctx context.Context, in *SignupRequest, o
 	return out, nil
 }
 
+func (c *accountServicesClient) GetSessionToken(ctx context.Context, in *GetSessionTokenRequest, opts ...grpc.CallOption) (*GetSessionTokenResponse, error) {
+	out := new(GetSessionTokenResponse)
+	err := c.cc.Invoke(ctx, "/proto.AccountServices/GetSessionToken", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *accountServicesClient) GetAccountInfo(ctx context.Context, in *GetAccountInfoRequest, opts ...grpc.CallOption) (*GetAccountInfoResponse, error) {
+	out := new(GetAccountInfoResponse)
+	err := c.cc.Invoke(ctx, "/proto.AccountServices/GetAccountInfo", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AccountServicesServer is the server API for AccountServices service.
 // All implementations should embed UnimplementedAccountServicesServer
 // for forward compatibility
 type AccountServicesServer interface {
 	Signup(context.Context, *SignupRequest) (*SignupResponse, error)
+	GetSessionToken(context.Context, *GetSessionTokenRequest) (*GetSessionTokenResponse, error)
+	GetAccountInfo(context.Context, *GetAccountInfoRequest) (*GetAccountInfoResponse, error)
 }
 
 // UnimplementedAccountServicesServer should be embedded to have forward compatible implementations.
@@ -51,6 +73,12 @@ type UnimplementedAccountServicesServer struct {
 
 func (UnimplementedAccountServicesServer) Signup(context.Context, *SignupRequest) (*SignupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Signup not implemented")
+}
+func (UnimplementedAccountServicesServer) GetSessionToken(context.Context, *GetSessionTokenRequest) (*GetSessionTokenResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetSessionToken not implemented")
+}
+func (UnimplementedAccountServicesServer) GetAccountInfo(context.Context, *GetAccountInfoRequest) (*GetAccountInfoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetAccountInfo not implemented")
 }
 
 // UnsafeAccountServicesServer may be embedded to opt out of forward compatibility for this service.
@@ -82,6 +110,42 @@ func _AccountServices_Signup_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AccountServices_GetSessionToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetSessionTokenRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AccountServicesServer).GetSessionToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.AccountServices/GetSessionToken",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AccountServicesServer).GetSessionToken(ctx, req.(*GetSessionTokenRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AccountServices_GetAccountInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAccountInfoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AccountServicesServer).GetAccountInfo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.AccountServices/GetAccountInfo",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AccountServicesServer).GetAccountInfo(ctx, req.(*GetAccountInfoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // AccountServices_ServiceDesc is the grpc.ServiceDesc for AccountServices service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -92,6 +156,14 @@ var AccountServices_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Signup",
 			Handler:    _AccountServices_Signup_Handler,
+		},
+		{
+			MethodName: "GetSessionToken",
+			Handler:    _AccountServices_GetSessionToken_Handler,
+		},
+		{
+			MethodName: "GetAccountInfo",
+			Handler:    _AccountServices_GetAccountInfo_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

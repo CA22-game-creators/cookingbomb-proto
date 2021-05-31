@@ -10,5 +10,23 @@ message SignupRequest {
 }
 
 message SignupResponse {
-  Account account = 1;
+  AccountInfo accountInfo = 1;
+  string authToken = 2;
+}
+
+message GetSessionTokenRequest {
+  string userId = 1 [ (stringOpts) = {regexp : "[0-9A-Z]{26}"} ];
+  string authToken = 2 [ (stringOpts) = {regexp : "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"} ];
+}
+
+message GetSessionTokenResponse {
+  string sessionToken = 1;
+}
+
+message GetAccountInfoRequest {
+  string sessionToken = 1 [ (stringOpts) = {regexp : "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"} ];
+}
+
+message GetAccountInfoResponse {
+  AccountInfo accountInfo = 1;
 }
