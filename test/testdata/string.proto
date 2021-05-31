@@ -24,3 +24,7 @@ message StringMulti {
   string value1 = 1 [ (proto.stringOpts) = {min_len : 5, max_len : 10} ];
   string value2 = 2 [ (proto.stringOpts) = {min_len : 5, max_len : 10} ];
 }
+
+message StringRegexp {
+  string value = 1 [ (stringOpts) = {regexp : "[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}"} ];
+}

@@ -5,6 +5,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/proto"
 
@@ -47,7 +48,19 @@ func TestValidate(t *testing.T) {
 			expected: errors.New("value:length should be 10 characters or less"),
 		},
 		{
-			title: "【異常系】複数文字列フィールドで文字数が異常",
+			title:    "【正常系】文字列フィールドでformatが正常",
+			input:    &tdPb.StringRegexp{Value: uuid.Must(uuid.NewRandom()).String()},
+			expected: nil,
+		},
+		{
+			title: "【異常系】文字列フィールドでformatが異常",
+			input: &tdPb.StringRegexp{Value: "invalid_uuid"},
+			expected: errors.New(
+				"value:invalid string",
+			),
+		},
+		{
+			title: "【異常系】複数文字列フィールドでの異常",
 			input: &tdPb.StringMulti{Value1: "a", Value2: "a"},
 			expected: errors.New(
 				"value1:length should be 5 characters or more; value2:length should be 5 characters or more",

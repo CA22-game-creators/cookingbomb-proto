@@ -1,7 +1,9 @@
 package validation
 
 import (
+	"errors"
 	"fmt"
+	"regexp"
 	"unicode/utf8"
 
 	"google.golang.org/protobuf/reflect/protoreflect"
@@ -13,7 +15,7 @@ func validateString(fieldName protoreflect.Name, opts *pb.StringOpts, v string) 
 	var errs error
 
 	errs = appendErr(errs, validateLength(opts, v))
-	// TODO その他の文字列フィールドバリデーション
+	errs = appendErr(errs, validateRegexp(opts, v))
 	if errs != nil {
 		errs = fmt.Errorf("%v:%v", fieldName, errs)
 	}
@@ -29,6 +31,22 @@ func validateLength(opts *pb.StringOpts, v string) error {
 	}
 	if opts.MaxLen != nil && actualLen > int(*opts.MaxLen) {
 		return fmt.Errorf("length should be %d characters or less", int(*opts.MaxLen))
+	}
+
+	return nil
+}
+
+func validateRegexp(opts *pb.StringOpts, v string) error {
+	if opts.Regexp == nil {
+		return nil
+	}
+
+	isValid, err := regexp.MatchString(*opts.Regexp, v)
+	if err != nil {
+		return errors.New(err.Error())
+	}
+	if !isValid {
+		return errors.New("invalid string")
 	}
 
 	return nil

@@ -11,4 +11,5 @@ extend google.protobuf.FieldOptions {
 message StringOpts {
   optional int32 max_len = 1;
   optional int32 min_len = 2;
+  optional string regexp = 3;
 }
