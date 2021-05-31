@@ -2,6 +2,7 @@ syntax = "proto3";
 option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto/api";
 package proto;
 
+import "google/protobuf/timestamp.proto";
 import "proto/api/model.proto";
 import "proto/common/option.proto";
 
@@ -10,5 +11,23 @@ message SignupRequest {
 }
 
 message SignupResponse {
-  Account account = 1;
+  AccountInfo accountInfo = 1;
+  string authToken = 2;
+}
+
+message GetSessionTokenRequest {
+  string authToken = 1 [ (stringOpts) = {regexp : "[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}"} ];
+}
+
+message GetSessionTokenResponse {
+  string sessionToken = 1;
+  google.protobuf.Timestamp expiredAt = 2;
+}
+
+message GetAccountInfoRequest {
+  string sessionToken = 1 [ (stringOpts) = {regexp : "[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}"} ];
+}
+
+message GetAccountInfoResponse {
+  AccountInfo accountInfo = 1;
 }
