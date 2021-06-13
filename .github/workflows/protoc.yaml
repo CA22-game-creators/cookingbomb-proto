@@ -42,6 +42,7 @@ jobs:
         sudo ldconfig   
     - name: install proto-gen-go etc
       run : |
+        go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
         go install google.golang.org/grpc
         go install github.com/golang/protobuf/protoc-gen-go
         go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
