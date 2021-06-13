@@ -1,0 +1,38 @@
+name: protoc
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths-ignore:
+      - "**.md"
+
+jobs:
+  protoc:
+    name: protoc
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Go 1.16
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Module
+      run: go mod download
+
+    - name: Set up protobuf
+      run: |
+        PROTOC_ZIP=protoc-3.17.3-linux-x86_64.zip
+        curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/$PROTOC_ZIP
+        sudo unzip -o $PROTOC_ZIP -d /usr/local bin/protoc
+        sudo unzip -o $PROTOC_ZIP -d /usr/local 'include/*'
+        rm -f $PROTOC_ZIP
+
+    - name: check install
+      run: protoc --version
+
+    - name: proto compile
+      run: |
+        make run
