@@ -22,13 +22,24 @@ jobs:
     - name: Module
       run: go mod download
 
-    - name: Set up protobuf
+    - name: Cache protobuf library
+      id: cache-protobuf
+      uses: actions/cache@v1
+      with:
+        path: protobuf
+        key: ${{ runner.os }}-protobuf
+    - name: Build protobuf library
       run: |
-        PROTOC_ZIP=protoc-3.17.3-linux-x86_64.zip
-        curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/$PROTOC_ZIP
-        sudo unzip -o $PROTOC_ZIP -d /usr/local bin/protoc
-        sudo unzip -o $PROTOC_ZIP -d /usr/local 'include/*'
-        rm -f $PROTOC_ZIP
+        git clone https://github.com/protocolbuffers/protobuf.git
+        cd protobuf
+        git submodule update --init --recursive
+        ./autogen.sh
+        ./autogen.sh
+        ./configure
+        make
+        make check
+        sudo make install
+        sudo ldconfig   
 
     - name: check install
       run: protoc --version
