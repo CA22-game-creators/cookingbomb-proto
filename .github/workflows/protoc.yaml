@@ -40,6 +40,11 @@ jobs:
         make check
         sudo make install
         sudo ldconfig   
+    - name: install proto-gen-go etc
+      run : |
+        go install google.golang.org/grpc
+        go install github.com/golang/protobuf/protoc-gen-go
+        go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
     - name: check install
       run: protoc --version
