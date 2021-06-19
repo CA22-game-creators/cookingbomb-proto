@@ -29,6 +29,7 @@ setup-game-server:
 	protoc \
 	--go_out=./server/pb/game \
 	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/game \
+	--go_opt=Mproto/common/option.proto=github.com/CA22-game-creators/cookingbomb-proto/server/pb/common \
 	--go-grpc_out=./server/pb/game \
 	--go-grpc_opt=require_unimplemented_servers=false \
 	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/game \
@@ -43,4 +44,4 @@ setup-game-server:
 
 .PHONY: test
 test:
-	go test ./test/server/... -count=1
+	go test ./server/test/... -count=1
