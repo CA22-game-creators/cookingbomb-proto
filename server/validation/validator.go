@@ -1,8 +1,12 @@
 package validation
 
 import (
+	"errors"
 	"fmt"
+	"regexp"
 
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"google.golang.org/protobuf/types/descriptorpb"
@@ -14,34 +18,50 @@ func Validate(pb proto.Message) error {
 	return validate(pb.ProtoReflect())
 }
 
-func validate(m protoreflect.Message) error {
+func validate(message protoreflect.Message) error {
 	var errs error
 
-	fields := m.Descriptor().Fields()
+	fields := message.Descriptor().Fields()
 	for i := 0; i < fields.Len(); i++ {
 		field := fields.Get(i)
 
 		// フィールドがmessage型なら再起的にバリデーション
 		if field.Kind() == protoreflect.MessageKind {
-			errs = appendErr(errs, validate(m.Get(field).Message()))
+			errs = appendErr(errs, validate(message.Get(field).Message()))
 			continue
 		}
 
-		// フィールドオプション取得
+		// フィールドオプションからバリデーション取得
 		options := field.Options().(*descriptorpb.FieldOptions)
-
-		// 文字列型のバリデーション
-		stringOptions, ok := proto.GetExtension(options, pb.E_StringOpts).(*pb.StringOpts)
-		if ok && stringOptions != nil {
-			strVal := m.Get(field).Interface().(string)
-			errs = appendErr(errs, validateString(field.Name(), stringOptions, strVal))
+		validations, ok := proto.GetExtension(options, pb.E_Opts).(*pb.Opts)
+		if !ok || validations == nil {
 			continue
 		}
 
-		// TODO 数値型などのバリデーション
+		// フィールドデータ取得
+		value := message.Get(field).Interface().(string)
+
+		// 正規表現バリデーション
+		if validations.Regexp != nil {
+			isValid, err := regexp.MatchString(*validations.Regexp, value)
+			if err != nil {
+				return status.Error(codes.Internal, err.Error())
+			}
+			if !isValid {
+				if validations.Message != nil {
+					errs = appendErr(errs, errors.New(*validations.Message))
+					continue
+				}
+				errs = appendErr(errs, errors.New("request invalid"))
+				continue
+			}
+		}
 	}
 
-	return errs
+	if errs != nil {
+		return status.Error(codes.InvalidArgument, errs.Error())
+	}
+	return nil
 }
 
 func appendErr(stack, new error) error {
@@ -51,5 +71,5 @@ func appendErr(stack, new error) error {
 	if stack == nil {
 		return new
 	}
-	return fmt.Errorf("%v; %v", stack, new)
+	return fmt.Errorf("%v\n%v", stack, new)
 }
