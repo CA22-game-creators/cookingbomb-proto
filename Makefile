@@ -1,5 +1,5 @@
 .PHONY: run
-run: setup-common-server setup-api-server setup-game-server setup-server-test # setup-client
+run: setup-common-server setup-api-server setup-game-server # setup-client
 
 .PHONY: setup-common-server
 setup-common-server:
@@ -34,14 +34,6 @@ setup-game-server:
 	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/game \
 	./proto/game/*.proto
 	go mod tidy
-
-.PHONY: setup-server-test
-setup-server-test:
-	protoc \
-	--go_out=./test/testdata/pb \
-	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/test/testdata \
-	--go_opt=Mproto/common/option.proto=github.com/CA22-game-creators/cookingbomb-proto/server/pb/common \
-	./test/testdata/*.proto
 
 # .PHONY: setup-client
 # setup-client:
