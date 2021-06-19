@@ -6,7 +6,7 @@ import "proto/api/model.proto";
 import "proto/common/option.proto";
 
 message SignupRequest {
-  string name = 1 [ (stringOpts) = {regexp : "^([0-9０-９a-zA-Zぁ-んァ-ヶｦ-ﾟ一-龠]{1,10})$"} ];
+  string name = 1 [ (opts) = {regexp : "^([0-9０-９a-zA-Zぁ-んァ-ヶｦ-ﾟ一-龠]{1,10})$", message : "ユーザー名は半角英数字か日本語の1-10文字である必要があります"} ];
 }
 
 message SignupResponse {
@@ -15,8 +15,8 @@ message SignupResponse {
 }
 
 message GetSessionTokenRequest {
-  string userId = 1 [ (stringOpts) = {regexp : "^([0-9A-Z]{26})$"} ];
-  string authToken = 2 [ (stringOpts) = {regexp : "^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"} ];
+  string userId = 1 [ (opts) = {regexp : "^([0-9A-Z]{26})$", message : "ユーザーIDが不正な形式です"} ];
+  string authToken = 2 [ (opts) = {regexp : "^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$", message : "authTokenが不正な形式です"} ];
 }
 
 message GetSessionTokenResponse {
@@ -24,7 +24,7 @@ message GetSessionTokenResponse {
 }
 
 message GetAccountInfoRequest {
-  string sessionToken = 1 [ (stringOpts) = {regexp : "^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"} ];
+  string sessionToken = 1 [ (opts) = {regexp : "^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$", message : "sessionTokenが不正な形式です"} ];
 }
 
 message GetAccountInfoResponse {
