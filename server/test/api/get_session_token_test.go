@@ -34,6 +34,11 @@ func TestGetSessionTokenRequest(t *testing.T) {
 			input:    &pb.GetSessionTokenRequest{UserId: "00000000000000000000000001", AuthToken: "invalid"},
 			expected: status.Error(codes.InvalidArgument, "authTokenが不正な形式です"),
 		},
+		{
+			title:    "【異常系】ユーザーIDもauthTokenも不正値",
+			input:    &pb.GetSessionTokenRequest{UserId: "invalid", AuthToken: "invalid"},
+			expected: status.Error(codes.InvalidArgument, "ユーザーIDが不正な形式です\nauthTokenが不正な形式です"),
+		},
 	}
 
 	for _, td := range tests {
