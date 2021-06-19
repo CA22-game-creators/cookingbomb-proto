@@ -1,6 +1,6 @@
 .PHONY: run
 run: setup-common-server setup-api-server setup-game-server # setup-client
-
+	go mod tidy
 .PHONY: setup-common-server
 setup-common-server:
 	protoc \
@@ -10,7 +10,6 @@ setup-common-server:
 	--go-grpc_opt=require_unimplemented_servers=false \
 	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/common \
 	./proto/common/*.proto
-	go mod tidy
 
 .PHONY: setup-api-server
 setup-api-server:
@@ -22,7 +21,6 @@ setup-api-server:
 	--go-grpc_opt=require_unimplemented_servers=false \
 	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/api \
 	./proto/api/*.proto
-	go mod tidy
 
 .PHONY: setup-game-server
 setup-game-server:
@@ -34,7 +32,6 @@ setup-game-server:
 	--go-grpc_opt=require_unimplemented_servers=false \
 	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/game \
 	./proto/game/*.proto
-	go mod tidy
 
 # .PHONY: setup-client
 # setup-client:
