@@ -1,0 +1,55 @@
+name: protoc
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths-ignore:
+      - "**.md"
+
+jobs:
+  protoc:
+    name: protoc
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Go 1.16
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Module
+      run: go mod download
+
+    - name: Cache protobuf library
+      id: cache-protobuf
+      uses: actions/cache@v1
+      with:
+        path: protobuf
+        key: ${{ runner.os }}-protobuf
+    - name: Build protobuf library
+      run: |
+        git clone https://github.com/protocolbuffers/protobuf.git
+        cd protobuf
+        git submodule update --init --recursive
+        ./autogen.sh
+        ./autogen.sh
+        ./configure
+        make
+        make check
+        sudo make install
+        sudo ldconfig   
+    - name: install proto-gen-go etc
+      run : |
+        go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
+        go install google.golang.org/grpc
+        go install github.com/golang/protobuf/protoc-gen-go
+        go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
+
+    - name: check install
+      run: protoc --version
+
+    - name: proto compile
+      run: |
+        make run
