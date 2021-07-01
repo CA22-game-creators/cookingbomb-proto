@@ -33,11 +33,24 @@ setup-game-server:
 	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/game \
 	./proto/game/*.proto
 
-# .PHONY: setup-client
-# setup-client:
-# 	protoc --csharp_out=./client/api/pb ./proto/api/*.proto
-# 	protoc --csharp_out=./client/game/pb ./proto/game/*.proto
-# 	protoc --csharp_out=./client/common/pb ./proto/common/*.proto
+.PHONY: setup-client
+setup-client:
+	protoc \
+	--csharp_out=./client/api \
+	--grpc_out=./client/api \
+	--plugin=protoc-gen-grpc=/usr/local/bin/grpc_csharp_plugin \
+	./proto/api/*.proto
+	protoc \
+	--csharp_out=./client/game \
+	--grpc_out=./client/game \
+	--plugin=protoc-gen-grpc=/usr/local/bin/grpc_csharp_plugin \
+	./proto/game/*.proto
+	protoc \
+	--experimental_allow_proto3_optional \
+	--csharp_out=./client/common \
+	--grpc_out=./client/common \
+	--plugin=protoc-gen-grpc=/usr/local/bin/grpc_csharp_plugin \
+	./proto/common/*.proto
 
 .PHONY: test
 test:
