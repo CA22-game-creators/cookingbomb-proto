@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"regexp"
 
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"google.golang.org/protobuf/types/descriptorpb"
@@ -45,7 +43,7 @@ func validate(message protoreflect.Message) error {
 		if validations.Regexp != nil {
 			isValid, err := regexp.MatchString(*validations.Regexp, value)
 			if err != nil {
-				return status.Error(codes.Internal, err.Error())
+				return err
 			}
 			if !isValid {
 				if validations.Message != nil {
@@ -59,7 +57,7 @@ func validate(message protoreflect.Message) error {
 	}
 
 	if errs != nil {
-		return status.Error(codes.InvalidArgument, errs.Error())
+		return errs
 	}
 	return nil
 }

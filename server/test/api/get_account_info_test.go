@@ -1,11 +1,10 @@
 package api_test
 
 import (
+	"errors"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/status"
 
 	pb "github.com/CA22-game-creators/cookingbomb-proto/server/pb/api"
 	"github.com/CA22-game-creators/cookingbomb-proto/server/validation"
@@ -27,7 +26,7 @@ func TestGetAccountInfoRequest(t *testing.T) {
 		{
 			title:    "【異常系】sessionTokenがUUIDの形式でない",
 			input:    &pb.GetAccountInfoRequest{SessionToken: "invalid"},
-			expected: status.Error(codes.InvalidArgument, "sessionTokenが不正な形式です"),
+			expected: errors.New("sessionTokenが不正な形式です"),
 		},
 	}
 
