@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Proto {
+namespace Proto.Api {
 
   /// <summary>Holder for reflection information generated from proto/api/service.proto</summary>
   public static partial class ServiceReflection {
@@ -30,11 +30,11 @@ namespace Proto {
             "D0dldFNlc3Npb25Ub2tlbhIdLnByb3RvLkdldFNlc3Npb25Ub2tlblJlcXVl",
             "c3QaHi5wcm90by5HZXRTZXNzaW9uVG9rZW5SZXNwb25zZRJNCg5HZXRBY2Nv",
             "dW50SW5mbxIcLnByb3RvLkdldEFjY291bnRJbmZvUmVxdWVzdBodLnByb3Rv",
-            "LkdldEFjY291bnRJbmZvUmVzcG9uc2VCO1o5Z2l0aHViLmNvbS9DQTIyLWdh",
-            "bWUtY3JlYXRvcnMvY29va2luZ2JvbWItcHJvdG8vcHJvdG8vYXBpYgZwcm90",
-            "bzM="));
+            "LkdldEFjY291bnRJbmZvUmVzcG9uc2VCR1o5Z2l0aHViLmNvbS9DQTIyLWdh",
+            "bWUtY3JlYXRvcnMvY29va2luZ2JvbWItcHJvdG8vcHJvdG8vYXBpqgIJUHJv",
+            "dG8uQXBpYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Proto.MessageReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Proto.Api.MessageReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, null));
     }
     #endregion

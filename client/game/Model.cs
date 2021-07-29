@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Proto {
+namespace Proto.Game {
 
   /// <summary>Holder for reflection information generated from proto/game/model.proto</summary>
   public static partial class ModelReflection {
@@ -35,14 +35,14 @@ namespace Proto {
             "YXR1c0VudW0SGgoWQ09OTkVDVElPTl9VTlNQRUNJRklFRBAAEg4KCkNPTk5F",
             "Q1RJTkcQARINCglDT05ORUNURUQQAhIaChZESVNDT05ORUNURURfQllfQ0xJ",
             "RU5UEAMSGgoWRElTQ09OTkVDVEVEX0JZX1NFUlZFUhAEEhAKDERJU0NPTk5F",
-            "Q1RFRBAFEhMKD0NPTk5FQ1RJT05fRkFJTBAGQjxaOmdpdGh1Yi5jb20vQ0Ey",
-            "Mi1nYW1lLWNyZWF0b3JzL2Nvb2tpbmdib21iLXByb3RvL3Byb3RvL2dhbWVi",
-            "BnByb3RvMw=="));
+            "Q1RFRBAFEhMKD0NPTk5FQ1RJT05fRkFJTBAGQklaOmdpdGh1Yi5jb20vQ0Ey",
+            "Mi1nYW1lLWNyZWF0b3JzL2Nvb2tpbmdib21iLXByb3RvL3Byb3RvL2dhbWWq",
+            "AgpQcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Proto.StructureReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Proto.ConnectionStatusEnum), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Characters), global::Proto.Characters.Parser, new[]{ "Characters_" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Character), global::Proto.Character.Parser, new[]{ "Id", "IsActive", "Position", "Rotation", "Verocity", "UpdateTime" }, null, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Proto.Game.StructureReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Proto.Game.ConnectionStatusEnum), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.Characters), global::Proto.Game.Characters.Parser, new[]{ "Characters_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.Character), global::Proto.Game.Character.Parser, new[]{ "Id", "IsActive", "Position", "Rotation", "Verocity", "UpdateTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -55,7 +55,7 @@ namespace Proto {
     /// </summary>
     [pbr::OriginalName("CONNECTION_UNSPECIFIED")] ConnectionUnspecified = 0,
     /// <summary>
-    ///接続を試行中 
+    ///接続を試行中
     /// </summary>
     [pbr::OriginalName("CONNECTING")] Connecting = 1,
     /// <summary>
@@ -95,7 +95,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.ModelReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Proto.Game.ModelReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,11 +123,11 @@ namespace Proto {
 
     /// <summary>Field number for the "characters" field.</summary>
     public const int Characters_FieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Proto.Character> _repeated_characters_codec
-        = pb::FieldCodec.ForMessage(10, global::Proto.Character.Parser);
-    private readonly pbc::RepeatedField<global::Proto.Character> characters_ = new pbc::RepeatedField<global::Proto.Character>();
+    private static readonly pb::FieldCodec<global::Proto.Game.Character> _repeated_characters_codec
+        = pb::FieldCodec.ForMessage(10, global::Proto.Game.Character.Parser);
+    private readonly pbc::RepeatedField<global::Proto.Game.Character> characters_ = new pbc::RepeatedField<global::Proto.Game.Character>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Proto.Character> Characters_ {
+    public pbc::RepeatedField<global::Proto.Game.Character> Characters_ {
       get { return characters_; }
     }
 
@@ -256,7 +256,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.ModelReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Proto.Game.ModelReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -311,9 +311,9 @@ namespace Proto {
 
     /// <summary>Field number for the "position" field.</summary>
     public const int PositionFieldNumber = 3;
-    private global::Proto.Position position_;
+    private global::Proto.Game.Position position_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.Position Position {
+    public global::Proto.Game.Position Position {
       get { return position_; }
       set {
         position_ = value;
@@ -322,9 +322,9 @@ namespace Proto {
 
     /// <summary>Field number for the "rotation" field.</summary>
     public const int RotationFieldNumber = 4;
-    private global::Proto.Rotation rotation_;
+    private global::Proto.Game.Rotation rotation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.Rotation Rotation {
+    public global::Proto.Game.Rotation Rotation {
       get { return rotation_; }
       set {
         rotation_ = value;
@@ -333,9 +333,9 @@ namespace Proto {
 
     /// <summary>Field number for the "verocity" field.</summary>
     public const int VerocityFieldNumber = 5;
-    private global::Proto.Verocity verocity_;
+    private global::Proto.Game.Verocity verocity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.Verocity Verocity {
+    public global::Proto.Game.Verocity Verocity {
       get { return verocity_; }
       set {
         verocity_ = value;
@@ -503,19 +503,19 @@ namespace Proto {
       }
       if (other.position_ != null) {
         if (position_ == null) {
-          Position = new global::Proto.Position();
+          Position = new global::Proto.Game.Position();
         }
         Position.MergeFrom(other.Position);
       }
       if (other.rotation_ != null) {
         if (rotation_ == null) {
-          Rotation = new global::Proto.Rotation();
+          Rotation = new global::Proto.Game.Rotation();
         }
         Rotation.MergeFrom(other.Rotation);
       }
       if (other.verocity_ != null) {
         if (verocity_ == null) {
-          Verocity = new global::Proto.Verocity();
+          Verocity = new global::Proto.Game.Verocity();
         }
         Verocity.MergeFrom(other.Verocity);
       }
@@ -549,21 +549,21 @@ namespace Proto {
           }
           case 26: {
             if (position_ == null) {
-              Position = new global::Proto.Position();
+              Position = new global::Proto.Game.Position();
             }
             input.ReadMessage(Position);
             break;
           }
           case 34: {
             if (rotation_ == null) {
-              Rotation = new global::Proto.Rotation();
+              Rotation = new global::Proto.Game.Rotation();
             }
             input.ReadMessage(Rotation);
             break;
           }
           case 42: {
             if (verocity_ == null) {
-              Verocity = new global::Proto.Verocity();
+              Verocity = new global::Proto.Game.Verocity();
             }
             input.ReadMessage(Verocity);
             break;
@@ -599,21 +599,21 @@ namespace Proto {
           }
           case 26: {
             if (position_ == null) {
-              Position = new global::Proto.Position();
+              Position = new global::Proto.Game.Position();
             }
             input.ReadMessage(Position);
             break;
           }
           case 34: {
             if (rotation_ == null) {
-              Rotation = new global::Proto.Rotation();
+              Rotation = new global::Proto.Game.Rotation();
             }
             input.ReadMessage(Rotation);
             break;
           }
           case 42: {
             if (verocity_ == null) {
-              Verocity = new global::Proto.Verocity();
+              Verocity = new global::Proto.Game.Verocity();
             }
             input.ReadMessage(Verocity);
             break;

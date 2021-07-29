@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Proto {
+namespace Proto.Game {
 
   /// <summary>Holder for reflection information generated from proto/game/service.proto</summary>
   public static partial class ServiceReflection {
@@ -31,11 +31,11 @@ namespace Proto {
             "GhkucHJvdG8uQ29ubmVjdGlvblJlc3BvbnNlEkoKE0dldENvbm5lY3Rpb25T",
             "dGF0dXMSGC5wcm90by5Db25uZWN0aW9uUmVxdWVzdBoZLnByb3RvLkNvbm5l",
             "Y3Rpb25SZXNwb25zZRJFCg5HYW1lRGF0YVN0cmVhbRIWLnByb3RvLkdhbWVE",
-            "YXRhUmVxdWVzdBoXLnByb3RvLkdhbWVEYXRhUmVzcG9uc2UoATABQjxaOmdp",
+            "YXRhUmVxdWVzdBoXLnByb3RvLkdhbWVEYXRhUmVzcG9uc2UoATABQklaOmdp",
             "dGh1Yi5jb20vQ0EyMi1nYW1lLWNyZWF0b3JzL2Nvb2tpbmdib21iLXByb3Rv",
-            "L3Byb3RvL2dhbWViBnByb3RvMw=="));
+            "L3Byb3RvL2dhbWWqAgpQcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Proto.MessageReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Proto.Game.MessageReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, null));
     }
     #endregion

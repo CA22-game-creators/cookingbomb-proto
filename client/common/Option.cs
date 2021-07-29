@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Proto {
+namespace Proto.Common {
 
   /// <summary>Holder for reflection information generated from proto/common/option.proto</summary>
   public static partial class OptionReflection {
@@ -28,13 +28,13 @@ namespace Proto {
             "b3RvYnVmL2Rlc2NyaXB0b3IucHJvdG8iSAoET3B0cxITCgZyZWdleHAYASAB",
             "KAlIAIgBARIUCgdtZXNzYWdlGAIgASgJSAGIAQFCCQoHX3JlZ2V4cEIKCghf",
             "bWVzc2FnZTo6CgRvcHRzEh0uZ29vZ2xlLnByb3RvYnVmLkZpZWxkT3B0aW9u",
-            "cxjQhgMgASgLMgsucHJvdG8uT3B0c0I+WjxnaXRodWIuY29tL0NBMjItZ2Ft",
-            "ZS1jcmVhdG9ycy9jb29raW5nYm9tYi1wcm90by9wcm90by9jb21tb25iBnBy",
-            "b3RvMw=="));
+            "cxjQhgMgASgLMgsucHJvdG8uT3B0c0JNWjxnaXRodWIuY29tL0NBMjItZ2Ft",
+            "ZS1jcmVhdG9ycy9jb29raW5nYm9tYi1wcm90by9wcm90by9jb21tb26qAgxQ",
+            "cm90by5Db21tb25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pb::Extension[] { OptionExtensions.Opts }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Opts), global::Proto.Opts.Parser, new[]{ "Regexp", "Message" }, new[]{ "Regexp", "Message" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Common.Opts), global::Proto.Common.Opts.Parser, new[]{ "Regexp", "Message" }, new[]{ "Regexp", "Message" }, null, null, null)
           }));
     }
     #endregion
@@ -42,8 +42,8 @@ namespace Proto {
   }
   /// <summary>Holder for extension identifiers generated from the top level of proto/common/option.proto</summary>
   public static partial class OptionExtensions {
-    public static readonly pb::Extension<global::Google.Protobuf.Reflection.FieldOptions, global::Proto.Opts> Opts =
-      new pb::Extension<global::Google.Protobuf.Reflection.FieldOptions, global::Proto.Opts>(50000, pb::FieldCodec.ForMessage(400002, global::Proto.Opts.Parser));
+    public static readonly pb::Extension<global::Google.Protobuf.Reflection.FieldOptions, global::Proto.Common.Opts> Opts =
+      new pb::Extension<global::Google.Protobuf.Reflection.FieldOptions, global::Proto.Common.Opts>(50000, pb::FieldCodec.ForMessage(400002, global::Proto.Common.Opts.Parser));
   }
 
   #region Messages
@@ -59,7 +59,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.OptionReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Proto.Common.OptionReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

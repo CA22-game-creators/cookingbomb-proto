@@ -7,7 +7,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Proto {
+namespace Proto.Game {
   public static partial class GameServices
   {
     static readonly string __ServiceName = "proto.GameServices";
@@ -42,33 +42,33 @@ namespace Proto {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
-    static readonly grpc::Marshaller<global::Proto.ConnectionRequest> __Marshaller_proto_ConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.ConnectionRequest.Parser));
-    static readonly grpc::Marshaller<global::Proto.ConnectionResponse> __Marshaller_proto_ConnectionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.ConnectionResponse.Parser));
-    static readonly grpc::Marshaller<global::Proto.GameDataRequest> __Marshaller_proto_GameDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GameDataRequest.Parser));
-    static readonly grpc::Marshaller<global::Proto.GameDataResponse> __Marshaller_proto_GameDataResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GameDataResponse.Parser));
+    static readonly grpc::Marshaller<global::Proto.Game.ConnectionRequest> __Marshaller_proto_ConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Game.ConnectionRequest.Parser));
+    static readonly grpc::Marshaller<global::Proto.Game.ConnectionResponse> __Marshaller_proto_ConnectionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Game.ConnectionResponse.Parser));
+    static readonly grpc::Marshaller<global::Proto.Game.GameDataRequest> __Marshaller_proto_GameDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Game.GameDataRequest.Parser));
+    static readonly grpc::Marshaller<global::Proto.Game.GameDataResponse> __Marshaller_proto_GameDataResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Game.GameDataResponse.Parser));
 
-    static readonly grpc::Method<global::Proto.ConnectionRequest, global::Proto.ConnectionResponse> __Method_Connect = new grpc::Method<global::Proto.ConnectionRequest, global::Proto.ConnectionResponse>(
+    static readonly grpc::Method<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse> __Method_Connect = new grpc::Method<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Connect",
         __Marshaller_proto_ConnectionRequest,
         __Marshaller_proto_ConnectionResponse);
 
-    static readonly grpc::Method<global::Proto.ConnectionRequest, global::Proto.ConnectionResponse> __Method_Disconnect = new grpc::Method<global::Proto.ConnectionRequest, global::Proto.ConnectionResponse>(
+    static readonly grpc::Method<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse> __Method_Disconnect = new grpc::Method<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Disconnect",
         __Marshaller_proto_ConnectionRequest,
         __Marshaller_proto_ConnectionResponse);
 
-    static readonly grpc::Method<global::Proto.ConnectionRequest, global::Proto.ConnectionResponse> __Method_GetConnectionStatus = new grpc::Method<global::Proto.ConnectionRequest, global::Proto.ConnectionResponse>(
+    static readonly grpc::Method<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse> __Method_GetConnectionStatus = new grpc::Method<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetConnectionStatus",
         __Marshaller_proto_ConnectionRequest,
         __Marshaller_proto_ConnectionResponse);
 
-    static readonly grpc::Method<global::Proto.GameDataRequest, global::Proto.GameDataResponse> __Method_GameDataStream = new grpc::Method<global::Proto.GameDataRequest, global::Proto.GameDataResponse>(
+    static readonly grpc::Method<global::Proto.Game.GameDataRequest, global::Proto.Game.GameDataResponse> __Method_GameDataStream = new grpc::Method<global::Proto.Game.GameDataRequest, global::Proto.Game.GameDataResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
         "GameDataStream",
@@ -78,29 +78,29 @@ namespace Proto {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Proto.ServiceReflection.Descriptor.Services[0]; }
+      get { return global::Proto.Game.ServiceReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of GameServices</summary>
     [grpc::BindServiceMethod(typeof(GameServices), "BindService")]
     public abstract partial class GameServicesBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Proto.ConnectionResponse> Connect(global::Proto.ConnectionRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Proto.Game.ConnectionResponse> Connect(global::Proto.Game.ConnectionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Proto.ConnectionResponse> Disconnect(global::Proto.ConnectionRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Proto.Game.ConnectionResponse> Disconnect(global::Proto.Game.ConnectionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Proto.ConnectionResponse> GetConnectionStatus(global::Proto.ConnectionRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Proto.Game.ConnectionResponse> GetConnectionStatus(global::Proto.Game.ConnectionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task GameDataStream(grpc::IAsyncStreamReader<global::Proto.GameDataRequest> requestStream, grpc::IServerStreamWriter<global::Proto.GameDataResponse> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task GameDataStream(grpc::IAsyncStreamReader<global::Proto.Game.GameDataRequest> requestStream, grpc::IServerStreamWriter<global::Proto.Game.GameDataResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -130,59 +130,59 @@ namespace Proto {
       {
       }
 
-      public virtual global::Proto.ConnectionResponse Connect(global::Proto.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Proto.Game.ConnectionResponse Connect(global::Proto.Game.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Connect(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Proto.ConnectionResponse Connect(global::Proto.ConnectionRequest request, grpc::CallOptions options)
+      public virtual global::Proto.Game.ConnectionResponse Connect(global::Proto.Game.ConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Connect, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.ConnectionResponse> ConnectAsync(global::Proto.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Proto.Game.ConnectionResponse> ConnectAsync(global::Proto.Game.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ConnectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.ConnectionResponse> ConnectAsync(global::Proto.ConnectionRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Proto.Game.ConnectionResponse> ConnectAsync(global::Proto.Game.ConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Connect, null, options, request);
       }
-      public virtual global::Proto.ConnectionResponse Disconnect(global::Proto.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Proto.Game.ConnectionResponse Disconnect(global::Proto.Game.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Disconnect(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Proto.ConnectionResponse Disconnect(global::Proto.ConnectionRequest request, grpc::CallOptions options)
+      public virtual global::Proto.Game.ConnectionResponse Disconnect(global::Proto.Game.ConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Disconnect, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.ConnectionResponse> DisconnectAsync(global::Proto.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Proto.Game.ConnectionResponse> DisconnectAsync(global::Proto.Game.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisconnectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.ConnectionResponse> DisconnectAsync(global::Proto.ConnectionRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Proto.Game.ConnectionResponse> DisconnectAsync(global::Proto.Game.ConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Disconnect, null, options, request);
       }
-      public virtual global::Proto.ConnectionResponse GetConnectionStatus(global::Proto.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Proto.Game.ConnectionResponse GetConnectionStatus(global::Proto.Game.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConnectionStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Proto.ConnectionResponse GetConnectionStatus(global::Proto.ConnectionRequest request, grpc::CallOptions options)
+      public virtual global::Proto.Game.ConnectionResponse GetConnectionStatus(global::Proto.Game.ConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetConnectionStatus, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.ConnectionResponse> GetConnectionStatusAsync(global::Proto.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Proto.Game.ConnectionResponse> GetConnectionStatusAsync(global::Proto.Game.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConnectionStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.ConnectionResponse> GetConnectionStatusAsync(global::Proto.ConnectionRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Proto.Game.ConnectionResponse> GetConnectionStatusAsync(global::Proto.Game.ConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetConnectionStatus, null, options, request);
       }
-      public virtual grpc::AsyncDuplexStreamingCall<global::Proto.GameDataRequest, global::Proto.GameDataResponse> GameDataStream(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncDuplexStreamingCall<global::Proto.Game.GameDataRequest, global::Proto.Game.GameDataResponse> GameDataStream(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GameDataStream(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncDuplexStreamingCall<global::Proto.GameDataRequest, global::Proto.GameDataResponse> GameDataStream(grpc::CallOptions options)
+      public virtual grpc::AsyncDuplexStreamingCall<global::Proto.Game.GameDataRequest, global::Proto.Game.GameDataResponse> GameDataStream(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_GameDataStream, null, options);
       }
@@ -210,10 +210,10 @@ namespace Proto {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GameServicesBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Connect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.ConnectionRequest, global::Proto.ConnectionResponse>(serviceImpl.Connect));
-      serviceBinder.AddMethod(__Method_Disconnect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.ConnectionRequest, global::Proto.ConnectionResponse>(serviceImpl.Disconnect));
-      serviceBinder.AddMethod(__Method_GetConnectionStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.ConnectionRequest, global::Proto.ConnectionResponse>(serviceImpl.GetConnectionStatus));
-      serviceBinder.AddMethod(__Method_GameDataStream, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Proto.GameDataRequest, global::Proto.GameDataResponse>(serviceImpl.GameDataStream));
+      serviceBinder.AddMethod(__Method_Connect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse>(serviceImpl.Connect));
+      serviceBinder.AddMethod(__Method_Disconnect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse>(serviceImpl.Disconnect));
+      serviceBinder.AddMethod(__Method_GetConnectionStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse>(serviceImpl.GetConnectionStatus));
+      serviceBinder.AddMethod(__Method_GameDataStream, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Proto.Game.GameDataRequest, global::Proto.Game.GameDataResponse>(serviceImpl.GameDataStream));
     }
 
   }

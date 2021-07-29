@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Proto {
+namespace Proto.Api {
 
   /// <summary>Holder for reflection information generated from proto/api/message.proto</summary>
   public static partial class MessageReflection {
@@ -43,17 +43,17 @@ namespace Proto {
             "Zl17NH0tWzAtOWEtZl17NH0tWzAtOWEtZl17MTJ9KSQSJHNlc3Npb25Ub2tl",
             "buOBjOS4jeato+OBquW9ouW8j+OBp+OBmSJBChZHZXRBY2NvdW50SW5mb1Jl",
             "c3BvbnNlEicKC2FjY291bnRJbmZvGAEgASgLMhIucHJvdG8uQWNjb3VudElu",
-            "Zm9CO1o5Z2l0aHViLmNvbS9DQTIyLWdhbWUtY3JlYXRvcnMvY29va2luZ2Jv",
-            "bWItcHJvdG8vcHJvdG8vYXBpYgZwcm90bzM="));
+            "Zm9CR1o5Z2l0aHViLmNvbS9DQTIyLWdhbWUtY3JlYXRvcnMvY29va2luZ2Jv",
+            "bWItcHJvdG8vcHJvdG8vYXBpqgIJUHJvdG8uQXBpYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Proto.ModelReflection.Descriptor, global::Proto.OptionReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Proto.Api.ModelReflection.Descriptor, global::Proto.Common.OptionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.SignupRequest), global::Proto.SignupRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.SignupResponse), global::Proto.SignupResponse.Parser, new[]{ "AccountInfo", "AuthToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.GetSessionTokenRequest), global::Proto.GetSessionTokenRequest.Parser, new[]{ "UserId", "AuthToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.GetSessionTokenResponse), global::Proto.GetSessionTokenResponse.Parser, new[]{ "SessionToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.GetAccountInfoRequest), global::Proto.GetAccountInfoRequest.Parser, new[]{ "SessionToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.GetAccountInfoResponse), global::Proto.GetAccountInfoResponse.Parser, new[]{ "AccountInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.SignupRequest), global::Proto.Api.SignupRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.SignupResponse), global::Proto.Api.SignupResponse.Parser, new[]{ "AccountInfo", "AuthToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.GetSessionTokenRequest), global::Proto.Api.GetSessionTokenRequest.Parser, new[]{ "UserId", "AuthToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.GetSessionTokenResponse), global::Proto.Api.GetSessionTokenResponse.Parser, new[]{ "SessionToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.GetAccountInfoRequest), global::Proto.Api.GetAccountInfoRequest.Parser, new[]{ "SessionToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.GetAccountInfoResponse), global::Proto.Api.GetAccountInfoResponse.Parser, new[]{ "AccountInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.MessageReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -244,7 +244,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.MessageReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -273,9 +273,9 @@ namespace Proto {
 
     /// <summary>Field number for the "accountInfo" field.</summary>
     public const int AccountInfoFieldNumber = 1;
-    private global::Proto.AccountInfo accountInfo_;
+    private global::Proto.Api.AccountInfo accountInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.AccountInfo AccountInfo {
+    public global::Proto.Api.AccountInfo AccountInfo {
       get { return accountInfo_; }
       set {
         accountInfo_ = value;
@@ -385,7 +385,7 @@ namespace Proto {
       }
       if (other.accountInfo_ != null) {
         if (accountInfo_ == null) {
-          AccountInfo = new global::Proto.AccountInfo();
+          AccountInfo = new global::Proto.Api.AccountInfo();
         }
         AccountInfo.MergeFrom(other.AccountInfo);
       }
@@ -408,7 +408,7 @@ namespace Proto {
             break;
           case 10: {
             if (accountInfo_ == null) {
-              AccountInfo = new global::Proto.AccountInfo();
+              AccountInfo = new global::Proto.Api.AccountInfo();
             }
             input.ReadMessage(AccountInfo);
             break;
@@ -433,7 +433,7 @@ namespace Proto {
             break;
           case 10: {
             if (accountInfo_ == null) {
-              AccountInfo = new global::Proto.AccountInfo();
+              AccountInfo = new global::Proto.Api.AccountInfo();
             }
             input.ReadMessage(AccountInfo);
             break;
@@ -461,7 +461,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.MessageReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -669,7 +669,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.MessageReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -841,7 +841,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.MessageReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1013,7 +1013,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.MessageReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1041,9 +1041,9 @@ namespace Proto {
 
     /// <summary>Field number for the "accountInfo" field.</summary>
     public const int AccountInfoFieldNumber = 1;
-    private global::Proto.AccountInfo accountInfo_;
+    private global::Proto.Api.AccountInfo accountInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.AccountInfo AccountInfo {
+    public global::Proto.Api.AccountInfo AccountInfo {
       get { return accountInfo_; }
       set {
         accountInfo_ = value;
@@ -1129,7 +1129,7 @@ namespace Proto {
       }
       if (other.accountInfo_ != null) {
         if (accountInfo_ == null) {
-          AccountInfo = new global::Proto.AccountInfo();
+          AccountInfo = new global::Proto.Api.AccountInfo();
         }
         AccountInfo.MergeFrom(other.AccountInfo);
       }
@@ -1149,7 +1149,7 @@ namespace Proto {
             break;
           case 10: {
             if (accountInfo_ == null) {
-              AccountInfo = new global::Proto.AccountInfo();
+              AccountInfo = new global::Proto.Api.AccountInfo();
             }
             input.ReadMessage(AccountInfo);
             break;
@@ -1170,7 +1170,7 @@ namespace Proto {
             break;
           case 10: {
             if (accountInfo_ == null) {
-              AccountInfo = new global::Proto.AccountInfo();
+              AccountInfo = new global::Proto.Api.AccountInfo();
             }
             input.ReadMessage(AccountInfo);
             break;

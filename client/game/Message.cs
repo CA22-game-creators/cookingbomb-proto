@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Proto {
+namespace Proto.Game {
 
   /// <summary>Holder for reflection information generated from proto/game/message.proto</summary>
   public static partial class MessageReflection {
@@ -39,15 +39,15 @@ namespace Proto {
             "CgdtZXNzYWdlInwKEEdhbWVEYXRhUmVzcG9uc2USLAoPY2hhcmFjdGVyX2Rh",
             "dGFzGAEgASgLMhEucHJvdG8uQ2hhcmFjdGVyc0gAEi8KC3NlcnZlcl90aW1l",
             "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIJCgdtZXNzYWdl",
-            "QjxaOmdpdGh1Yi5jb20vQ0EyMi1nYW1lLWNyZWF0b3JzL2Nvb2tpbmdib21i",
-            "LXByb3RvL3Byb3RvL2dhbWViBnByb3RvMw=="));
+            "QklaOmdpdGh1Yi5jb20vQ0EyMi1nYW1lLWNyZWF0b3JzL2Nvb2tpbmdib21i",
+            "LXByb3RvL3Byb3RvL2dhbWWqAgpQcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Proto.ModelReflection.Descriptor, global::Proto.OptionReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Proto.Game.ModelReflection.Descriptor, global::Proto.Common.OptionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.ConnectionRequest), global::Proto.ConnectionRequest.Parser, new[]{ "SessionToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.ConnectionResponse), global::Proto.ConnectionResponse.Parser, new[]{ "Status" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.GameDataRequest), global::Proto.GameDataRequest.Parser, new[]{ "SessionToken", "CharacterUpdate" }, new[]{ "Message" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.GameDataResponse), global::Proto.GameDataResponse.Parser, new[]{ "CharacterDatas", "ServerTime" }, new[]{ "Message" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.ConnectionRequest), global::Proto.Game.ConnectionRequest.Parser, new[]{ "SessionToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.ConnectionResponse), global::Proto.Game.ConnectionResponse.Parser, new[]{ "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.GameDataRequest), global::Proto.Game.GameDataRequest.Parser, new[]{ "SessionToken", "CharacterUpdate" }, new[]{ "Message" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.GameDataResponse), global::Proto.Game.GameDataResponse.Parser, new[]{ "CharacterDatas", "ServerTime" }, new[]{ "Message" }, null, null, null)
           }));
     }
     #endregion
@@ -66,7 +66,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.MessageReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Proto.Game.MessageReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -238,7 +238,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.MessageReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Proto.Game.MessageReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -266,9 +266,9 @@ namespace Proto {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 1;
-    private global::Proto.ConnectionStatusEnum status_ = global::Proto.ConnectionStatusEnum.ConnectionUnspecified;
+    private global::Proto.Game.ConnectionStatusEnum status_ = global::Proto.Game.ConnectionStatusEnum.ConnectionUnspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.ConnectionStatusEnum Status {
+    public global::Proto.Game.ConnectionStatusEnum Status {
       get { return status_; }
       set {
         status_ = value;
@@ -295,7 +295,7 @@ namespace Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Status != global::Proto.ConnectionStatusEnum.ConnectionUnspecified) hash ^= Status.GetHashCode();
+      if (Status != global::Proto.Game.ConnectionStatusEnum.ConnectionUnspecified) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -312,7 +312,7 @@ namespace Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Status != global::Proto.ConnectionStatusEnum.ConnectionUnspecified) {
+      if (Status != global::Proto.Game.ConnectionStatusEnum.ConnectionUnspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Status);
       }
@@ -325,7 +325,7 @@ namespace Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Status != global::Proto.ConnectionStatusEnum.ConnectionUnspecified) {
+      if (Status != global::Proto.Game.ConnectionStatusEnum.ConnectionUnspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Status);
       }
@@ -338,7 +338,7 @@ namespace Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Status != global::Proto.ConnectionStatusEnum.ConnectionUnspecified) {
+      if (Status != global::Proto.Game.ConnectionStatusEnum.ConnectionUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -352,7 +352,7 @@ namespace Proto {
       if (other == null) {
         return;
       }
-      if (other.Status != global::Proto.ConnectionStatusEnum.ConnectionUnspecified) {
+      if (other.Status != global::Proto.Game.ConnectionStatusEnum.ConnectionUnspecified) {
         Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -370,7 +370,7 @@ namespace Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Status = (global::Proto.ConnectionStatusEnum) input.ReadEnum();
+            Status = (global::Proto.Game.ConnectionStatusEnum) input.ReadEnum();
             break;
           }
         }
@@ -388,7 +388,7 @@ namespace Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Status = (global::Proto.ConnectionStatusEnum) input.ReadEnum();
+            Status = (global::Proto.Game.ConnectionStatusEnum) input.ReadEnum();
             break;
           }
         }
@@ -410,7 +410,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.MessageReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Proto.Game.MessageReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -456,8 +456,8 @@ namespace Proto {
     /// <summary>Field number for the "character_update" field.</summary>
     public const int CharacterUpdateFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.Character CharacterUpdate {
-      get { return messageCase_ == MessageOneofCase.CharacterUpdate ? (global::Proto.Character) message_ : null; }
+    public global::Proto.Game.Character CharacterUpdate {
+      get { return messageCase_ == MessageOneofCase.CharacterUpdate ? (global::Proto.Game.Character) message_ : null; }
       set {
         message_ = value;
         messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.CharacterUpdate;
@@ -580,7 +580,7 @@ namespace Proto {
       switch (other.MessageCase) {
         case MessageOneofCase.CharacterUpdate:
           if (CharacterUpdate == null) {
-            CharacterUpdate = new global::Proto.Character();
+            CharacterUpdate = new global::Proto.Game.Character();
           }
           CharacterUpdate.MergeFrom(other.CharacterUpdate);
           break;
@@ -605,7 +605,7 @@ namespace Proto {
             break;
           }
           case 18: {
-            global::Proto.Character subBuilder = new global::Proto.Character();
+            global::Proto.Game.Character subBuilder = new global::Proto.Game.Character();
             if (messageCase_ == MessageOneofCase.CharacterUpdate) {
               subBuilder.MergeFrom(CharacterUpdate);
             }
@@ -632,7 +632,7 @@ namespace Proto {
             break;
           }
           case 18: {
-            global::Proto.Character subBuilder = new global::Proto.Character();
+            global::Proto.Game.Character subBuilder = new global::Proto.Game.Character();
             if (messageCase_ == MessageOneofCase.CharacterUpdate) {
               subBuilder.MergeFrom(CharacterUpdate);
             }
@@ -659,7 +659,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.MessageReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Proto.Game.MessageReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -694,8 +694,8 @@ namespace Proto {
     /// <summary>Field number for the "character_datas" field.</summary>
     public const int CharacterDatasFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.Characters CharacterDatas {
-      get { return messageCase_ == MessageOneofCase.CharacterDatas ? (global::Proto.Characters) message_ : null; }
+    public global::Proto.Game.Characters CharacterDatas {
+      get { return messageCase_ == MessageOneofCase.CharacterDatas ? (global::Proto.Game.Characters) message_ : null; }
       set {
         message_ = value;
         messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.CharacterDatas;
@@ -832,7 +832,7 @@ namespace Proto {
       switch (other.MessageCase) {
         case MessageOneofCase.CharacterDatas:
           if (CharacterDatas == null) {
-            CharacterDatas = new global::Proto.Characters();
+            CharacterDatas = new global::Proto.Game.Characters();
           }
           CharacterDatas.MergeFrom(other.CharacterDatas);
           break;
@@ -853,7 +853,7 @@ namespace Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            global::Proto.Characters subBuilder = new global::Proto.Characters();
+            global::Proto.Game.Characters subBuilder = new global::Proto.Game.Characters();
             if (messageCase_ == MessageOneofCase.CharacterDatas) {
               subBuilder.MergeFrom(CharacterDatas);
             }
@@ -883,7 +883,7 @@ namespace Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            global::Proto.Characters subBuilder = new global::Proto.Characters();
+            global::Proto.Game.Characters subBuilder = new global::Proto.Game.Characters();
             if (messageCase_ == MessageOneofCase.CharacterDatas) {
               subBuilder.MergeFrom(CharacterDatas);
             }

@@ -7,7 +7,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Proto {
+namespace Proto.Api {
   public static partial class AccountServices
   {
     static readonly string __ServiceName = "proto.AccountServices";
@@ -42,28 +42,28 @@ namespace Proto {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
-    static readonly grpc::Marshaller<global::Proto.SignupRequest> __Marshaller_proto_SignupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.SignupRequest.Parser));
-    static readonly grpc::Marshaller<global::Proto.SignupResponse> __Marshaller_proto_SignupResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.SignupResponse.Parser));
-    static readonly grpc::Marshaller<global::Proto.GetSessionTokenRequest> __Marshaller_proto_GetSessionTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetSessionTokenRequest.Parser));
-    static readonly grpc::Marshaller<global::Proto.GetSessionTokenResponse> __Marshaller_proto_GetSessionTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetSessionTokenResponse.Parser));
-    static readonly grpc::Marshaller<global::Proto.GetAccountInfoRequest> __Marshaller_proto_GetAccountInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetAccountInfoRequest.Parser));
-    static readonly grpc::Marshaller<global::Proto.GetAccountInfoResponse> __Marshaller_proto_GetAccountInfoResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetAccountInfoResponse.Parser));
+    static readonly grpc::Marshaller<global::Proto.Api.SignupRequest> __Marshaller_proto_SignupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Api.SignupRequest.Parser));
+    static readonly grpc::Marshaller<global::Proto.Api.SignupResponse> __Marshaller_proto_SignupResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Api.SignupResponse.Parser));
+    static readonly grpc::Marshaller<global::Proto.Api.GetSessionTokenRequest> __Marshaller_proto_GetSessionTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Api.GetSessionTokenRequest.Parser));
+    static readonly grpc::Marshaller<global::Proto.Api.GetSessionTokenResponse> __Marshaller_proto_GetSessionTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Api.GetSessionTokenResponse.Parser));
+    static readonly grpc::Marshaller<global::Proto.Api.GetAccountInfoRequest> __Marshaller_proto_GetAccountInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Api.GetAccountInfoRequest.Parser));
+    static readonly grpc::Marshaller<global::Proto.Api.GetAccountInfoResponse> __Marshaller_proto_GetAccountInfoResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Api.GetAccountInfoResponse.Parser));
 
-    static readonly grpc::Method<global::Proto.SignupRequest, global::Proto.SignupResponse> __Method_Signup = new grpc::Method<global::Proto.SignupRequest, global::Proto.SignupResponse>(
+    static readonly grpc::Method<global::Proto.Api.SignupRequest, global::Proto.Api.SignupResponse> __Method_Signup = new grpc::Method<global::Proto.Api.SignupRequest, global::Proto.Api.SignupResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Signup",
         __Marshaller_proto_SignupRequest,
         __Marshaller_proto_SignupResponse);
 
-    static readonly grpc::Method<global::Proto.GetSessionTokenRequest, global::Proto.GetSessionTokenResponse> __Method_GetSessionToken = new grpc::Method<global::Proto.GetSessionTokenRequest, global::Proto.GetSessionTokenResponse>(
+    static readonly grpc::Method<global::Proto.Api.GetSessionTokenRequest, global::Proto.Api.GetSessionTokenResponse> __Method_GetSessionToken = new grpc::Method<global::Proto.Api.GetSessionTokenRequest, global::Proto.Api.GetSessionTokenResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetSessionToken",
         __Marshaller_proto_GetSessionTokenRequest,
         __Marshaller_proto_GetSessionTokenResponse);
 
-    static readonly grpc::Method<global::Proto.GetAccountInfoRequest, global::Proto.GetAccountInfoResponse> __Method_GetAccountInfo = new grpc::Method<global::Proto.GetAccountInfoRequest, global::Proto.GetAccountInfoResponse>(
+    static readonly grpc::Method<global::Proto.Api.GetAccountInfoRequest, global::Proto.Api.GetAccountInfoResponse> __Method_GetAccountInfo = new grpc::Method<global::Proto.Api.GetAccountInfoRequest, global::Proto.Api.GetAccountInfoResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAccountInfo",
@@ -73,24 +73,24 @@ namespace Proto {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Proto.ServiceReflection.Descriptor.Services[0]; }
+      get { return global::Proto.Api.ServiceReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of AccountServices</summary>
     [grpc::BindServiceMethod(typeof(AccountServices), "BindService")]
     public abstract partial class AccountServicesBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Proto.SignupResponse> Signup(global::Proto.SignupRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Proto.Api.SignupResponse> Signup(global::Proto.Api.SignupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Proto.GetSessionTokenResponse> GetSessionToken(global::Proto.GetSessionTokenRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Proto.Api.GetSessionTokenResponse> GetSessionToken(global::Proto.Api.GetSessionTokenRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Proto.GetAccountInfoResponse> GetAccountInfo(global::Proto.GetAccountInfoRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Proto.Api.GetAccountInfoResponse> GetAccountInfo(global::Proto.Api.GetAccountInfoRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -120,51 +120,51 @@ namespace Proto {
       {
       }
 
-      public virtual global::Proto.SignupResponse Signup(global::Proto.SignupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Proto.Api.SignupResponse Signup(global::Proto.Api.SignupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Signup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Proto.SignupResponse Signup(global::Proto.SignupRequest request, grpc::CallOptions options)
+      public virtual global::Proto.Api.SignupResponse Signup(global::Proto.Api.SignupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Signup, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.SignupResponse> SignupAsync(global::Proto.SignupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Proto.Api.SignupResponse> SignupAsync(global::Proto.Api.SignupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SignupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.SignupResponse> SignupAsync(global::Proto.SignupRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Proto.Api.SignupResponse> SignupAsync(global::Proto.Api.SignupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Signup, null, options, request);
       }
-      public virtual global::Proto.GetSessionTokenResponse GetSessionToken(global::Proto.GetSessionTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Proto.Api.GetSessionTokenResponse GetSessionToken(global::Proto.Api.GetSessionTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSessionToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Proto.GetSessionTokenResponse GetSessionToken(global::Proto.GetSessionTokenRequest request, grpc::CallOptions options)
+      public virtual global::Proto.Api.GetSessionTokenResponse GetSessionToken(global::Proto.Api.GetSessionTokenRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSessionToken, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.GetSessionTokenResponse> GetSessionTokenAsync(global::Proto.GetSessionTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Proto.Api.GetSessionTokenResponse> GetSessionTokenAsync(global::Proto.Api.GetSessionTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSessionTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.GetSessionTokenResponse> GetSessionTokenAsync(global::Proto.GetSessionTokenRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Proto.Api.GetSessionTokenResponse> GetSessionTokenAsync(global::Proto.Api.GetSessionTokenRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSessionToken, null, options, request);
       }
-      public virtual global::Proto.GetAccountInfoResponse GetAccountInfo(global::Proto.GetAccountInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Proto.Api.GetAccountInfoResponse GetAccountInfo(global::Proto.Api.GetAccountInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAccountInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Proto.GetAccountInfoResponse GetAccountInfo(global::Proto.GetAccountInfoRequest request, grpc::CallOptions options)
+      public virtual global::Proto.Api.GetAccountInfoResponse GetAccountInfo(global::Proto.Api.GetAccountInfoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAccountInfo, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.GetAccountInfoResponse> GetAccountInfoAsync(global::Proto.GetAccountInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Proto.Api.GetAccountInfoResponse> GetAccountInfoAsync(global::Proto.Api.GetAccountInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAccountInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Proto.GetAccountInfoResponse> GetAccountInfoAsync(global::Proto.GetAccountInfoRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Proto.Api.GetAccountInfoResponse> GetAccountInfoAsync(global::Proto.Api.GetAccountInfoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAccountInfo, null, options, request);
       }
@@ -191,9 +191,9 @@ namespace Proto {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AccountServicesBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Signup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.SignupRequest, global::Proto.SignupResponse>(serviceImpl.Signup));
-      serviceBinder.AddMethod(__Method_GetSessionToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.GetSessionTokenRequest, global::Proto.GetSessionTokenResponse>(serviceImpl.GetSessionToken));
-      serviceBinder.AddMethod(__Method_GetAccountInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.GetAccountInfoRequest, global::Proto.GetAccountInfoResponse>(serviceImpl.GetAccountInfo));
+      serviceBinder.AddMethod(__Method_Signup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.Api.SignupRequest, global::Proto.Api.SignupResponse>(serviceImpl.Signup));
+      serviceBinder.AddMethod(__Method_GetSessionToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.Api.GetSessionTokenRequest, global::Proto.Api.GetSessionTokenResponse>(serviceImpl.GetSessionToken));
+      serviceBinder.AddMethod(__Method_GetAccountInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.Api.GetAccountInfoRequest, global::Proto.Api.GetAccountInfoResponse>(serviceImpl.GetAccountInfo));
     }
 
   }

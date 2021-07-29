@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Proto {
+namespace Proto.Game {
 
   /// <summary>Holder for reflection information generated from proto/game/structure.proto</summary>
   public static partial class StructureReflection {
@@ -28,14 +28,14 @@ namespace Proto {
             "b24SCQoBeBgBIAEoAhIJCgF5GAIgASgCEgkKAXoYAyABKAIiNgoIUm90YXRp",
             "b24SCQoBeBgBIAEoAhIJCgF5GAIgASgCEgkKAXoYAyABKAISCQoBdxgEIAEo",
             "AiIrCghWZXJvY2l0eRIJCgF4GAEgASgCEgkKAXkYAiABKAISCQoBehgDIAEo",
-            "AkI8WjpnaXRodWIuY29tL0NBMjItZ2FtZS1jcmVhdG9ycy9jb29raW5nYm9t",
-            "Yi1wcm90by9wcm90by9nYW1lYgZwcm90bzM="));
+            "AkJJWjpnaXRodWIuY29tL0NBMjItZ2FtZS1jcmVhdG9ycy9jb29raW5nYm9t",
+            "Yi1wcm90by9wcm90by9nYW1lqgIKUHJvdG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Position), global::Proto.Position.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Rotation), global::Proto.Rotation.Parser, new[]{ "X", "Y", "Z", "W" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Verocity), global::Proto.Verocity.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.Position), global::Proto.Game.Position.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.Rotation), global::Proto.Game.Rotation.Parser, new[]{ "X", "Y", "Z", "W" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.Verocity), global::Proto.Game.Verocity.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null)
           }));
     }
     #endregion
@@ -54,7 +54,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.StructureReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Proto.Game.StructureReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -298,7 +298,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.StructureReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Proto.Game.StructureReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -578,7 +578,7 @@ namespace Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.StructureReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Proto.Game.StructureReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
