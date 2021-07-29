@@ -39,17 +39,20 @@ setup-client:
 	--csharp_out=./client/api \
 	--grpc_out=./client/api \
 	--plugin=protoc-gen-grpc=/usr/local/bin/grpc_csharp_plugin \
+	--csharp_opt=base_namespace=Proto.Api \
 	./proto/api/*.proto
 	protoc \
 	--csharp_out=./client/game \
 	--grpc_out=./client/game \
 	--plugin=protoc-gen-grpc=/usr/local/bin/grpc_csharp_plugin \
+	--csharp_opt=base_namespace=Proto.Game \
 	./proto/game/*.proto
 	protoc \
 	--experimental_allow_proto3_optional \
 	--csharp_out=./client/common \
 	--grpc_out=./client/common \
 	--plugin=protoc-gen-grpc=/usr/local/bin/grpc_csharp_plugin \
+	--csharp_opt=base_namespace=Proto.Common \
 	./proto/common/*.proto
 
 .PHONY: test
