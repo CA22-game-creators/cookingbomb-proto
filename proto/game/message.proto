@@ -5,21 +5,16 @@ package proto;
 
 import "google/protobuf/timestamp.proto";
 import "proto/game/model.proto";
-import "proto/common/option.proto";
 
-message ConnectionRequest {
-  string sessionToken = 1 [ (opts) = {regexp : "^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$", message : "sessionTokenが不正な形式です"} ];
-}
-
+message ConnectionRequest {}
 message ConnectionResponse {
   ConnectionStatusEnum status = 1;
 }
 
 message GameDataRequest {
-  string sessionToken = 1 [ (opts) = {regexp : "^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$", message : "sessionTokenが不正な形式です"} ];
-
   oneof message {
-    Character character_update = 2;
+    Character character_update = 1;
+    MatchInfomationRequest match_infomation_request = 2;
   }
 }
 
@@ -27,7 +22,8 @@ message GameDataResponse {
 
   oneof message {
     Characters character_datas = 1;
+    MatchInfomationResponce match_infomation_responce = 2;
   }
 
-  google.protobuf.Timestamp server_time = 2;
+  google.protobuf.Timestamp server_time = 3;
 }
