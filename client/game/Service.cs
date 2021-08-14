@@ -25,15 +25,12 @@ namespace Proto.Game {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chhwcm90by9nYW1lL3NlcnZpY2UucHJvdG8SBXByb3RvGhhwcm90by9nYW1l",
-            "L21lc3NhZ2UucHJvdG8ypAIKDEdhbWVTZXJ2aWNlcxI+CgdDb25uZWN0Ehgu",
-            "cHJvdG8uQ29ubmVjdGlvblJlcXVlc3QaGS5wcm90by5Db25uZWN0aW9uUmVz",
-            "cG9uc2USQQoKRGlzY29ubmVjdBIYLnByb3RvLkNvbm5lY3Rpb25SZXF1ZXN0",
-            "GhkucHJvdG8uQ29ubmVjdGlvblJlc3BvbnNlEkoKE0dldENvbm5lY3Rpb25T",
-            "dGF0dXMSGC5wcm90by5Db25uZWN0aW9uUmVxdWVzdBoZLnByb3RvLkNvbm5l",
-            "Y3Rpb25SZXNwb25zZRJFCg5HYW1lRGF0YVN0cmVhbRIWLnByb3RvLkdhbWVE",
-            "YXRhUmVxdWVzdBoXLnByb3RvLkdhbWVEYXRhUmVzcG9uc2UoATABQklaOmdp",
-            "dGh1Yi5jb20vQ0EyMi1nYW1lLWNyZWF0b3JzL2Nvb2tpbmdib21iLXByb3Rv",
-            "L3Byb3RvL2dhbWWqAgpQcm90by5HYW1lYgZwcm90bzM="));
+            "L21lc3NhZ2UucHJvdG8yoQEKDEdhbWVTZXJ2aWNlcxJKChNHZXRDb25uZWN0",
+            "aW9uU3RhdHVzEhgucHJvdG8uQ29ubmVjdGlvblJlcXVlc3QaGS5wcm90by5D",
+            "b25uZWN0aW9uUmVzcG9uc2USRQoOR2FtZURhdGFTdHJlYW0SFi5wcm90by5H",
+            "YW1lRGF0YVJlcXVlc3QaFy5wcm90by5HYW1lRGF0YVJlc3BvbnNlKAEwAUJJ",
+            "WjpnaXRodWIuY29tL0NBMjItZ2FtZS1jcmVhdG9ycy9jb29raW5nYm9tYi1w",
+            "cm90by9wcm90by9nYW1lqgIKUHJvdG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Proto.Game.MessageReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, null));
