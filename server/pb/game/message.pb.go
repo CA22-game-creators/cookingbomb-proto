@@ -193,7 +193,7 @@ type GameDataResponse struct {
 
 	// Types that are assignable to Message:
 	//	*GameDataResponse_CharacterDatas
-	//	*GameDataResponse_MatchInfomationResponce
+	//	*GameDataResponse_MatchInfomationResponse
 	Message    isGameDataResponse_Message `protobuf_oneof:"message"`
 	ServerTime *timestamppb.Timestamp     `protobuf:"bytes,3,opt,name=server_time,json=serverTime,proto3" json:"server_time,omitempty"`
 }
@@ -244,9 +244,9 @@ func (x *GameDataResponse) GetCharacterDatas() *Characters {
 	return nil
 }
 
-func (x *GameDataResponse) GetMatchInfomationResponce() *MatchInfomationResponce {
-	if x, ok := x.GetMessage().(*GameDataResponse_MatchInfomationResponce); ok {
-		return x.MatchInfomationResponce
+func (x *GameDataResponse) GetMatchInfomationResponse() *MatchInfomationResponse {
+	if x, ok := x.GetMessage().(*GameDataResponse_MatchInfomationResponse); ok {
+		return x.MatchInfomationResponse
 	}
 	return nil
 }
@@ -266,13 +266,13 @@ type GameDataResponse_CharacterDatas struct {
 	CharacterDatas *Characters `protobuf:"bytes,1,opt,name=character_datas,json=characterDatas,proto3,oneof"`
 }
 
-type GameDataResponse_MatchInfomationResponce struct {
-	MatchInfomationResponce *MatchInfomationResponce `protobuf:"bytes,2,opt,name=match_infomation_responce,json=matchInfomationResponce,proto3,oneof"`
+type GameDataResponse_MatchInfomationResponse struct {
+	MatchInfomationResponse *MatchInfomationResponse `protobuf:"bytes,2,opt,name=match_infomation_response,json=matchInfomationResponse,proto3,oneof"`
 }
 
 func (*GameDataResponse_CharacterDatas) isGameDataResponse_Message() {}
 
-func (*GameDataResponse_MatchInfomationResponce) isGameDataResponse_Message() {}
+func (*GameDataResponse_MatchInfomationResponse) isGameDataResponse_Message() {}
 
 var File_proto_game_message_proto protoreflect.FileDescriptor
 
@@ -307,11 +307,11 @@ var file_proto_game_message_proto_rawDesc = []byte{
 	0x74, 0x65, 0x72, 0x73, 0x48, 0x00, 0x52, 0x0e, 0x63, 0x68, 0x61, 0x72, 0x61, 0x63, 0x74, 0x65,
 	0x72, 0x44, 0x61, 0x74, 0x61, 0x73, 0x12, 0x5c, 0x0a, 0x19, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x5f,
 	0x69, 0x6e, 0x66, 0x6f, 0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x63, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1e, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6e, 0x73, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1e, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x2e, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x6e, 0x66, 0x6f, 0x6d, 0x61, 0x74, 0x69, 0x6f,
-	0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x63, 0x65, 0x48, 0x00, 0x52, 0x17, 0x6d, 0x61, 0x74,
+	0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x48, 0x00, 0x52, 0x17, 0x6d, 0x61, 0x74,
 	0x63, 0x68, 0x49, 0x6e, 0x66, 0x6f, 0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x63, 0x65, 0x12, 0x3b, 0x0a, 0x0b, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x5f, 0x74,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x3b, 0x0a, 0x0b, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x5f, 0x74,
 	0x69, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
 	0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65,
 	0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x0a, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x54, 0x69, 0x6d,
@@ -345,7 +345,7 @@ var file_proto_game_message_proto_goTypes = []interface{}{
 	(*Character)(nil),               // 5: proto.Character
 	(*MatchInfomationRequest)(nil),  // 6: proto.MatchInfomationRequest
 	(*Characters)(nil),              // 7: proto.Characters
-	(*MatchInfomationResponce)(nil), // 8: proto.MatchInfomationResponce
+	(*MatchInfomationResponse)(nil), // 8: proto.MatchInfomationResponse
 	(*timestamppb.Timestamp)(nil),   // 9: google.protobuf.Timestamp
 }
 var file_proto_game_message_proto_depIdxs = []int32{
@@ -353,7 +353,7 @@ var file_proto_game_message_proto_depIdxs = []int32{
 	5, // 1: proto.GameDataRequest.character_update:type_name -> proto.Character
 	6, // 2: proto.GameDataRequest.match_infomation_request:type_name -> proto.MatchInfomationRequest
 	7, // 3: proto.GameDataResponse.character_datas:type_name -> proto.Characters
-	8, // 4: proto.GameDataResponse.match_infomation_responce:type_name -> proto.MatchInfomationResponce
+	8, // 4: proto.GameDataResponse.match_infomation_response:type_name -> proto.MatchInfomationResponse
 	9, // 5: proto.GameDataResponse.server_time:type_name -> google.protobuf.Timestamp
 	6, // [6:6] is the sub-list for method output_type
 	6, // [6:6] is the sub-list for method input_type
@@ -424,7 +424,7 @@ func file_proto_game_message_proto_init() {
 	}
 	file_proto_game_message_proto_msgTypes[3].OneofWrappers = []interface{}{
 		(*GameDataResponse_CharacterDatas)(nil),
-		(*GameDataResponse_MatchInfomationResponce)(nil),
+		(*GameDataResponse_MatchInfomationResponse)(nil),
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{

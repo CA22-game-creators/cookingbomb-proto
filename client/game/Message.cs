@@ -33,8 +33,8 @@ namespace Proto.Game {
             "c3QYAiABKAsyHS5wcm90by5NYXRjaEluZm9tYXRpb25SZXF1ZXN0SABCCQoH",
             "bWVzc2FnZSLBAQoQR2FtZURhdGFSZXNwb25zZRIsCg9jaGFyYWN0ZXJfZGF0",
             "YXMYASABKAsyES5wcm90by5DaGFyYWN0ZXJzSAASQwoZbWF0Y2hfaW5mb21h",
-            "dGlvbl9yZXNwb25jZRgCIAEoCzIeLnByb3RvLk1hdGNoSW5mb21hdGlvblJl",
-            "c3BvbmNlSAASLwoLc2VydmVyX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
+            "dGlvbl9yZXNwb25zZRgCIAEoCzIeLnByb3RvLk1hdGNoSW5mb21hdGlvblJl",
+            "c3BvbnNlSAASLwoLc2VydmVyX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
             "dWYuVGltZXN0YW1wQgkKB21lc3NhZ2VCSVo6Z2l0aHViLmNvbS9DQTIyLWdh",
             "bWUtY3JlYXRvcnMvY29va2luZ2JvbWItcHJvdG8vcHJvdG8vZ2FtZaoCClBy",
             "b3RvLkdhbWViBnByb3RvMw=="));
@@ -44,7 +44,7 @@ namespace Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.ConnectionRequest), global::Proto.Game.ConnectionRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.ConnectionResponse), global::Proto.Game.ConnectionResponse.Parser, new[]{ "Status" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.GameDataRequest), global::Proto.Game.GameDataRequest.Parser, new[]{ "CharacterUpdate", "MatchInfomationRequest" }, new[]{ "Message" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.GameDataResponse), global::Proto.Game.GameDataResponse.Parser, new[]{ "CharacterDatas", "MatchInfomationResponce", "ServerTime" }, new[]{ "Message" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.GameDataResponse), global::Proto.Game.GameDataResponse.Parser, new[]{ "CharacterDatas", "MatchInfomationResponse", "ServerTime" }, new[]{ "Message" }, null, null, null)
           }));
     }
     #endregion
@@ -658,8 +658,8 @@ namespace Proto.Game {
         case MessageOneofCase.CharacterDatas:
           CharacterDatas = other.CharacterDatas.Clone();
           break;
-        case MessageOneofCase.MatchInfomationResponce:
-          MatchInfomationResponce = other.MatchInfomationResponce.Clone();
+        case MessageOneofCase.MatchInfomationResponse:
+          MatchInfomationResponse = other.MatchInfomationResponse.Clone();
           break;
       }
 
@@ -682,14 +682,14 @@ namespace Proto.Game {
       }
     }
 
-    /// <summary>Field number for the "match_infomation_responce" field.</summary>
-    public const int MatchInfomationResponceFieldNumber = 2;
+    /// <summary>Field number for the "match_infomation_response" field.</summary>
+    public const int MatchInfomationResponseFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.Game.MatchInfomationResponce MatchInfomationResponce {
-      get { return messageCase_ == MessageOneofCase.MatchInfomationResponce ? (global::Proto.Game.MatchInfomationResponce) message_ : null; }
+    public global::Proto.Game.MatchInfomationResponse MatchInfomationResponse {
+      get { return messageCase_ == MessageOneofCase.MatchInfomationResponse ? (global::Proto.Game.MatchInfomationResponse) message_ : null; }
       set {
         message_ = value;
-        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.MatchInfomationResponce;
+        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.MatchInfomationResponse;
       }
     }
 
@@ -709,7 +709,7 @@ namespace Proto.Game {
     public enum MessageOneofCase {
       None = 0,
       CharacterDatas = 1,
-      MatchInfomationResponce = 2,
+      MatchInfomationResponse = 2,
     }
     private MessageOneofCase messageCase_ = MessageOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -737,7 +737,7 @@ namespace Proto.Game {
         return true;
       }
       if (!object.Equals(CharacterDatas, other.CharacterDatas)) return false;
-      if (!object.Equals(MatchInfomationResponce, other.MatchInfomationResponce)) return false;
+      if (!object.Equals(MatchInfomationResponse, other.MatchInfomationResponse)) return false;
       if (!object.Equals(ServerTime, other.ServerTime)) return false;
       if (MessageCase != other.MessageCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -747,7 +747,7 @@ namespace Proto.Game {
     public override int GetHashCode() {
       int hash = 1;
       if (messageCase_ == MessageOneofCase.CharacterDatas) hash ^= CharacterDatas.GetHashCode();
-      if (messageCase_ == MessageOneofCase.MatchInfomationResponce) hash ^= MatchInfomationResponce.GetHashCode();
+      if (messageCase_ == MessageOneofCase.MatchInfomationResponse) hash ^= MatchInfomationResponse.GetHashCode();
       if (serverTime_ != null) hash ^= ServerTime.GetHashCode();
       hash ^= (int) messageCase_;
       if (_unknownFields != null) {
@@ -770,9 +770,9 @@ namespace Proto.Game {
         output.WriteRawTag(10);
         output.WriteMessage(CharacterDatas);
       }
-      if (messageCase_ == MessageOneofCase.MatchInfomationResponce) {
+      if (messageCase_ == MessageOneofCase.MatchInfomationResponse) {
         output.WriteRawTag(18);
-        output.WriteMessage(MatchInfomationResponce);
+        output.WriteMessage(MatchInfomationResponse);
       }
       if (serverTime_ != null) {
         output.WriteRawTag(26);
@@ -791,9 +791,9 @@ namespace Proto.Game {
         output.WriteRawTag(10);
         output.WriteMessage(CharacterDatas);
       }
-      if (messageCase_ == MessageOneofCase.MatchInfomationResponce) {
+      if (messageCase_ == MessageOneofCase.MatchInfomationResponse) {
         output.WriteRawTag(18);
-        output.WriteMessage(MatchInfomationResponce);
+        output.WriteMessage(MatchInfomationResponse);
       }
       if (serverTime_ != null) {
         output.WriteRawTag(26);
@@ -811,8 +811,8 @@ namespace Proto.Game {
       if (messageCase_ == MessageOneofCase.CharacterDatas) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CharacterDatas);
       }
-      if (messageCase_ == MessageOneofCase.MatchInfomationResponce) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MatchInfomationResponce);
+      if (messageCase_ == MessageOneofCase.MatchInfomationResponse) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MatchInfomationResponse);
       }
       if (serverTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServerTime);
@@ -841,11 +841,11 @@ namespace Proto.Game {
           }
           CharacterDatas.MergeFrom(other.CharacterDatas);
           break;
-        case MessageOneofCase.MatchInfomationResponce:
-          if (MatchInfomationResponce == null) {
-            MatchInfomationResponce = new global::Proto.Game.MatchInfomationResponce();
+        case MessageOneofCase.MatchInfomationResponse:
+          if (MatchInfomationResponse == null) {
+            MatchInfomationResponse = new global::Proto.Game.MatchInfomationResponse();
           }
-          MatchInfomationResponce.MergeFrom(other.MatchInfomationResponce);
+          MatchInfomationResponse.MergeFrom(other.MatchInfomationResponse);
           break;
       }
 
@@ -873,12 +873,12 @@ namespace Proto.Game {
             break;
           }
           case 18: {
-            global::Proto.Game.MatchInfomationResponce subBuilder = new global::Proto.Game.MatchInfomationResponce();
-            if (messageCase_ == MessageOneofCase.MatchInfomationResponce) {
-              subBuilder.MergeFrom(MatchInfomationResponce);
+            global::Proto.Game.MatchInfomationResponse subBuilder = new global::Proto.Game.MatchInfomationResponse();
+            if (messageCase_ == MessageOneofCase.MatchInfomationResponse) {
+              subBuilder.MergeFrom(MatchInfomationResponse);
             }
             input.ReadMessage(subBuilder);
-            MatchInfomationResponce = subBuilder;
+            MatchInfomationResponse = subBuilder;
             break;
           }
           case 26: {
@@ -912,12 +912,12 @@ namespace Proto.Game {
             break;
           }
           case 18: {
-            global::Proto.Game.MatchInfomationResponce subBuilder = new global::Proto.Game.MatchInfomationResponce();
-            if (messageCase_ == MessageOneofCase.MatchInfomationResponce) {
-              subBuilder.MergeFrom(MatchInfomationResponce);
+            global::Proto.Game.MatchInfomationResponse subBuilder = new global::Proto.Game.MatchInfomationResponse();
+            if (messageCase_ == MessageOneofCase.MatchInfomationResponse) {
+              subBuilder.MergeFrom(MatchInfomationResponse);
             }
             input.ReadMessage(subBuilder);
-            MatchInfomationResponce = subBuilder;
+            MatchInfomationResponse = subBuilder;
             break;
           }
           case 26: {

@@ -27,27 +27,27 @@ namespace Proto.Game {
             "ChZwcm90by9nYW1lL21vZGVsLnByb3RvEgVwcm90bxofZ29vZ2xlL3Byb3Rv",
             "YnVmL3RpbWVzdGFtcC5wcm90bxoacHJvdG8vZ2FtZS9zdHJ1Y3R1cmUucHJv",
             "dG8iMgoKQ2hhcmFjdGVycxIkCgpjaGFyYWN0ZXJzGAEgAygLMhAucHJvdG8u",
-            "Q2hhcmFjdGVyIucBCglDaGFyYWN0ZXISCgoCaWQYASABKAkSEQoJaXNfYWN0",
+            "Q2hhcmFjdGVyIugBCglDaGFyYWN0ZXISCgoCaWQYASABKAkSEQoJaXNfYWN0",
             "aXZlGAIgASgIEiEKCHBvc2l0aW9uGAMgASgLMg8ucHJvdG8uUG9zaXRpb24S",
             "IQoIcm90YXRpb24YBCABKAsyDy5wcm90by5Sb3RhdGlvbhIhCgh2ZWxvY2l0",
-            "eRgFIAEoCzIPLnByb3RvLlZlbG9jaXR5EiEKCGtleWlucHV0GAYgASgLMg8u",
-            "cHJvdG8uS2V5SW5wdXQSLwoLdXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wIhgKFk1hdGNoSW5mb21hdGlvblJlcXVlc3Qi",
-            "RAoXTWF0Y2hJbmZvbWF0aW9uUmVzcG9uY2USKQoIYWNjb3VudHMYASADKAsy",
-            "Fy5wcm90by5NYXRjaEFjY291bnRJbmZvKrABChRDb25uZWN0aW9uU3RhdHVz",
-            "RW51bRIaChZDT05ORUNUSU9OX1VOU1BFQ0lGSUVEEAASDgoKQ09OTkVDVElO",
-            "RxABEg0KCUNPTk5FQ1RFRBACEhoKFkRJU0NPTk5FQ1RFRF9CWV9DTElFTlQQ",
-            "AxIaChZESVNDT05ORUNURURfQllfU0VSVkVSEAQSEAoMRElTQ09OTkVDVEVE",
-            "EAUSEwoPQ09OTkVDVElPTl9GQUlMEAZCSVo6Z2l0aHViLmNvbS9DQTIyLWdh",
-            "bWUtY3JlYXRvcnMvY29va2luZ2JvbWItcHJvdG8vcHJvdG8vZ2FtZaoCClBy",
-            "b3RvLkdhbWViBnByb3RvMw=="));
+            "eRgFIAEoCzIPLnByb3RvLlZlbG9jaXR5EiIKCWtleV9pbnB1dBgGIAEoCzIP",
+            "LnByb3RvLktleUlucHV0Ei8KC3VwZGF0ZV90aW1lGAcgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcCIYChZNYXRjaEluZm9tYXRpb25SZXF1ZXN0",
+            "IkQKF01hdGNoSW5mb21hdGlvblJlc3BvbnNlEikKCGFjY291bnRzGAEgAygL",
+            "MhcucHJvdG8uTWF0Y2hBY2NvdW50SW5mbyqwAQoUQ29ubmVjdGlvblN0YXR1",
+            "c0VudW0SGgoWQ09OTkVDVElPTl9VTlNQRUNJRklFRBAAEg4KCkNPTk5FQ1RJ",
+            "TkcQARINCglDT05ORUNURUQQAhIaChZESVNDT05ORUNURURfQllfQ0xJRU5U",
+            "EAMSGgoWRElTQ09OTkVDVEVEX0JZX1NFUlZFUhAEEhAKDERJU0NPTk5FQ1RF",
+            "RBAFEhMKD0NPTk5FQ1RJT05fRkFJTBAGQklaOmdpdGh1Yi5jb20vQ0EyMi1n",
+            "YW1lLWNyZWF0b3JzL2Nvb2tpbmdib21iLXByb3RvL3Byb3RvL2dhbWWqAgpQ",
+            "cm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Proto.Game.StructureReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Proto.Game.ConnectionStatusEnum), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.Characters), global::Proto.Game.Characters.Parser, new[]{ "Characters_" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.Character), global::Proto.Game.Character.Parser, new[]{ "Id", "IsActive", "Position", "Rotation", "Velocity", "Keyinput", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.Character), global::Proto.Game.Character.Parser, new[]{ "Id", "IsActive", "Position", "Rotation", "Velocity", "KeyInput", "UpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.MatchInfomationRequest), global::Proto.Game.MatchInfomationRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.MatchInfomationResponce), global::Proto.Game.MatchInfomationResponce.Parser, new[]{ "Accounts" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.MatchInfomationResponse), global::Proto.Game.MatchInfomationResponse.Parser, new[]{ "Accounts" }, null, null, null, null)
           }));
     }
     #endregion
@@ -283,7 +283,7 @@ namespace Proto.Game {
       position_ = other.position_ != null ? other.position_.Clone() : null;
       rotation_ = other.rotation_ != null ? other.rotation_.Clone() : null;
       velocity_ = other.velocity_ != null ? other.velocity_.Clone() : null;
-      keyinput_ = other.keyinput_ != null ? other.keyinput_.Clone() : null;
+      keyInput_ = other.keyInput_ != null ? other.keyInput_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -348,14 +348,14 @@ namespace Proto.Game {
       }
     }
 
-    /// <summary>Field number for the "keyinput" field.</summary>
-    public const int KeyinputFieldNumber = 6;
-    private global::Proto.Game.KeyInput keyinput_;
+    /// <summary>Field number for the "key_input" field.</summary>
+    public const int KeyInputFieldNumber = 6;
+    private global::Proto.Game.KeyInput keyInput_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.Game.KeyInput Keyinput {
-      get { return keyinput_; }
+    public global::Proto.Game.KeyInput KeyInput {
+      get { return keyInput_; }
       set {
-        keyinput_ = value;
+        keyInput_ = value;
       }
     }
 
@@ -388,7 +388,7 @@ namespace Proto.Game {
       if (!object.Equals(Position, other.Position)) return false;
       if (!object.Equals(Rotation, other.Rotation)) return false;
       if (!object.Equals(Velocity, other.Velocity)) return false;
-      if (!object.Equals(Keyinput, other.Keyinput)) return false;
+      if (!object.Equals(KeyInput, other.KeyInput)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -401,7 +401,7 @@ namespace Proto.Game {
       if (position_ != null) hash ^= Position.GetHashCode();
       if (rotation_ != null) hash ^= Rotation.GetHashCode();
       if (velocity_ != null) hash ^= Velocity.GetHashCode();
-      if (keyinput_ != null) hash ^= Keyinput.GetHashCode();
+      if (keyInput_ != null) hash ^= KeyInput.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -439,9 +439,9 @@ namespace Proto.Game {
         output.WriteRawTag(42);
         output.WriteMessage(Velocity);
       }
-      if (keyinput_ != null) {
+      if (keyInput_ != null) {
         output.WriteRawTag(50);
-        output.WriteMessage(Keyinput);
+        output.WriteMessage(KeyInput);
       }
       if (updateTime_ != null) {
         output.WriteRawTag(58);
@@ -476,9 +476,9 @@ namespace Proto.Game {
         output.WriteRawTag(42);
         output.WriteMessage(Velocity);
       }
-      if (keyinput_ != null) {
+      if (keyInput_ != null) {
         output.WriteRawTag(50);
-        output.WriteMessage(Keyinput);
+        output.WriteMessage(KeyInput);
       }
       if (updateTime_ != null) {
         output.WriteRawTag(58);
@@ -508,8 +508,8 @@ namespace Proto.Game {
       if (velocity_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Velocity);
       }
-      if (keyinput_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Keyinput);
+      if (keyInput_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KeyInput);
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
@@ -549,11 +549,11 @@ namespace Proto.Game {
         }
         Velocity.MergeFrom(other.Velocity);
       }
-      if (other.keyinput_ != null) {
-        if (keyinput_ == null) {
-          Keyinput = new global::Proto.Game.KeyInput();
+      if (other.keyInput_ != null) {
+        if (keyInput_ == null) {
+          KeyInput = new global::Proto.Game.KeyInput();
         }
-        Keyinput.MergeFrom(other.Keyinput);
+        KeyInput.MergeFrom(other.KeyInput);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
@@ -605,10 +605,10 @@ namespace Proto.Game {
             break;
           }
           case 50: {
-            if (keyinput_ == null) {
-              Keyinput = new global::Proto.Game.KeyInput();
+            if (keyInput_ == null) {
+              KeyInput = new global::Proto.Game.KeyInput();
             }
-            input.ReadMessage(Keyinput);
+            input.ReadMessage(KeyInput);
             break;
           }
           case 58: {
@@ -662,10 +662,10 @@ namespace Proto.Game {
             break;
           }
           case 50: {
-            if (keyinput_ == null) {
-              Keyinput = new global::Proto.Game.KeyInput();
+            if (keyInput_ == null) {
+              KeyInput = new global::Proto.Game.KeyInput();
             }
-            input.ReadMessage(Keyinput);
+            input.ReadMessage(KeyInput);
             break;
           }
           case 58: {
@@ -818,15 +818,15 @@ namespace Proto.Game {
 
   }
 
-  public sealed partial class MatchInfomationResponce : pb::IMessage<MatchInfomationResponce>
+  public sealed partial class MatchInfomationResponse : pb::IMessage<MatchInfomationResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<MatchInfomationResponce> _parser = new pb::MessageParser<MatchInfomationResponce>(() => new MatchInfomationResponce());
+    private static readonly pb::MessageParser<MatchInfomationResponse> _parser = new pb::MessageParser<MatchInfomationResponse>(() => new MatchInfomationResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<MatchInfomationResponce> Parser { get { return _parser; } }
+    public static pb::MessageParser<MatchInfomationResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -839,21 +839,21 @@ namespace Proto.Game {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MatchInfomationResponce() {
+    public MatchInfomationResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MatchInfomationResponce(MatchInfomationResponce other) : this() {
+    public MatchInfomationResponse(MatchInfomationResponse other) : this() {
       accounts_ = other.accounts_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MatchInfomationResponce Clone() {
-      return new MatchInfomationResponce(this);
+    public MatchInfomationResponse Clone() {
+      return new MatchInfomationResponse(this);
     }
 
     /// <summary>Field number for the "accounts" field.</summary>
@@ -868,11 +868,11 @@ namespace Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as MatchInfomationResponce);
+      return Equals(other as MatchInfomationResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(MatchInfomationResponce other) {
+    public bool Equals(MatchInfomationResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -931,7 +931,7 @@ namespace Proto.Game {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(MatchInfomationResponce other) {
+    public void MergeFrom(MatchInfomationResponse other) {
       if (other == null) {
         return;
       }
