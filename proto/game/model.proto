@@ -29,12 +29,12 @@ message Character {
   Position position = 3;
   Rotation rotation = 4;
   Velocity velocity = 5;
-  KeyInput keyinput = 6;
+  KeyInput key_input = 6;
 
   google.protobuf.Timestamp update_time = 7;
 }
 
 message MatchInfomationRequest{}
-message MatchInfomationResponce{
+message MatchInfomationResponse{
   repeated MatchAccountInfo accounts = 1;
 }
