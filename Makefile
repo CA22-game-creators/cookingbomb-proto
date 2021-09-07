@@ -1,5 +1,5 @@
 .PHONY: run
-run: setup-common-server setup-api-server setup-game-server setup-client
+run: setup-common-server setup-api-server setup-game-server setup-match-server setup-client
 	go mod tidy
 
 .PHONY: setup-common-server
@@ -37,7 +37,7 @@ setup-game-server:
 .PHONY: setup-match-server
 setup-match-server:
 	protoc \
-	--go_out=./server/pb/ \
+	--go_out=./server/pb/match \
 	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/match \
 	--go_opt=Mproto/common/option.proto=github.com/CA22-game-creators/cookingbomb-proto/server/pb/common \
 	--go-grpc_out=./server/pb/match \
