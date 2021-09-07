@@ -1,0 +1,10 @@
+syntax = "proto3";
+option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto/match";
+option csharp_namespace = "Proto.Match";
+package proto;
+
+import "proto/match/message.proto";
+
+service MatchServices {
+  rpc Match(MatchRequest) returns (stream MatchResponse);
+}
