@@ -1,6 +1,7 @@
 .PHONY: run
-run: setup-common-server setup-api-server setup-game-server # setup-client
+run: setup-common-server setup-api-server setup-game-server setup-client
 	go mod tidy
+
 .PHONY: setup-common-server
 setup-common-server:
 	protoc \
@@ -33,6 +34,17 @@ setup-game-server:
 	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/game \
 	./proto/game/*.proto
 
+.PHONY: setup-match-server
+setup-match-server:
+	protoc \
+	--go_out=./server/pb/ \
+	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/match \
+	--go_opt=Mproto/common/option.proto=github.com/CA22-game-creators/cookingbomb-proto/server/pb/common \
+	--go-grpc_out=./server/pb/match \
+	--go-grpc_opt=require_unimplemented_servers=false \
+	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/match \
+	./proto/match/*.proto
+
 .PHONY: setup-client
 setup-client:
 	protoc \
@@ -54,6 +66,13 @@ setup-client:
 	--plugin=protoc-gen-grpc=/usr/local/bin/grpc_csharp_plugin \
 	--csharp_opt=base_namespace=Proto.Common \
 	./proto/common/*.proto
+	protoc \
+	--experimental_allow_proto3_optional \
+	--csharp_out=./client/match \
+	--grpc_out=./client/match \
+	--plugin=protoc-gen-grpc=/usr/local/bin/grpc_csharp_plugin \
+	--csharp_opt=base_namespace=Proto.Match \
+	./proto/match/*.proto
 
 .PHONY: test
 test:
