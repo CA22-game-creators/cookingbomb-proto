@@ -26,28 +26,25 @@ namespace Proto.Game {
           string.Concat(
             "Chhwcm90by9nYW1lL21lc3NhZ2UucHJvdG8SBXByb3RvGh9nb29nbGUvcHJv",
             "dG9idWYvdGltZXN0YW1wLnByb3RvGhZwcm90by9nYW1lL21vZGVsLnByb3Rv",
-            "Ghlwcm90by9jb21tb24vb3B0aW9uLnByb3RvIpgBChFDb25uZWN0aW9uUmVx",
-            "dWVzdBKCAQoMc2Vzc2lvblRva2VuGAEgASgJQmyCtRhoCkBeKFswLTlhLWZd",
-            "ezh9LVswLTlhLWZdezR9LVswLTlhLWZdezR9LVswLTlhLWZdezR9LVswLTlh",
-            "LWZdezEyfSkkEiRzZXNzaW9uVG9rZW7jgYzkuI3mraPjgarlvaLlvI/jgafj",
-            "gZkiQQoSQ29ubmVjdGlvblJlc3BvbnNlEisKBnN0YXR1cxgBIAEoDjIbLnBy",
-            "b3RvLkNvbm5lY3Rpb25TdGF0dXNFbnVtIs8BCg9HYW1lRGF0YVJlcXVlc3QS",
-            "ggEKDHNlc3Npb25Ub2tlbhgBIAEoCUJsgrUYaApAXihbMC05YS1mXXs4fS1b",
-            "MC05YS1mXXs0fS1bMC05YS1mXXs0fS1bMC05YS1mXXs0fS1bMC05YS1mXXsx",
-            "Mn0pJBIkc2Vzc2lvblRva2Vu44GM5LiN5q2j44Gq5b2i5byP44Gn44GZEiwK",
-            "EGNoYXJhY3Rlcl91cGRhdGUYAiABKAsyEC5wcm90by5DaGFyYWN0ZXJIAEIJ",
-            "CgdtZXNzYWdlInwKEEdhbWVEYXRhUmVzcG9uc2USLAoPY2hhcmFjdGVyX2Rh",
-            "dGFzGAEgASgLMhEucHJvdG8uQ2hhcmFjdGVyc0gAEi8KC3NlcnZlcl90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIJCgdtZXNzYWdl",
-            "QklaOmdpdGh1Yi5jb20vQ0EyMi1nYW1lLWNyZWF0b3JzL2Nvb2tpbmdib21i",
-            "LXByb3RvL3Byb3RvL2dhbWWqAgpQcm90by5HYW1lYgZwcm90bzM="));
+            "IhMKEUNvbm5lY3Rpb25SZXF1ZXN0IkEKEkNvbm5lY3Rpb25SZXNwb25zZRIr",
+            "CgZzdGF0dXMYASABKA4yGy5wcm90by5Db25uZWN0aW9uU3RhdHVzRW51bSKN",
+            "AQoPR2FtZURhdGFSZXF1ZXN0EiwKEGNoYXJhY3Rlcl91cGRhdGUYASABKAsy",
+            "EC5wcm90by5DaGFyYWN0ZXJIABJBChhtYXRjaF9pbmZvbWF0aW9uX3JlcXVl",
+            "c3QYAiABKAsyHS5wcm90by5NYXRjaEluZm9tYXRpb25SZXF1ZXN0SABCCQoH",
+            "bWVzc2FnZSLBAQoQR2FtZURhdGFSZXNwb25zZRIsCg9jaGFyYWN0ZXJfZGF0",
+            "YXMYASABKAsyES5wcm90by5DaGFyYWN0ZXJzSAASQwoZbWF0Y2hfaW5mb21h",
+            "dGlvbl9yZXNwb25zZRgCIAEoCzIeLnByb3RvLk1hdGNoSW5mb21hdGlvblJl",
+            "c3BvbnNlSAASLwoLc2VydmVyX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgkKB21lc3NhZ2VCSVo6Z2l0aHViLmNvbS9DQTIyLWdh",
+            "bWUtY3JlYXRvcnMvY29va2luZ2JvbWItcHJvdG8vcHJvdG8vZ2FtZaoCClBy",
+            "b3RvLkdhbWViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Proto.Game.ModelReflection.Descriptor, global::Proto.Common.OptionReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Proto.Game.ModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.ConnectionRequest), global::Proto.Game.ConnectionRequest.Parser, new[]{ "SessionToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.ConnectionRequest), global::Proto.Game.ConnectionRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.ConnectionResponse), global::Proto.Game.ConnectionResponse.Parser, new[]{ "Status" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.GameDataRequest), global::Proto.Game.GameDataRequest.Parser, new[]{ "SessionToken", "CharacterUpdate" }, new[]{ "Message" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.GameDataResponse), global::Proto.Game.GameDataResponse.Parser, new[]{ "CharacterDatas", "ServerTime" }, new[]{ "Message" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.GameDataRequest), global::Proto.Game.GameDataRequest.Parser, new[]{ "CharacterUpdate", "MatchInfomationRequest" }, new[]{ "Message" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Game.GameDataResponse), global::Proto.Game.GameDataResponse.Parser, new[]{ "CharacterDatas", "MatchInfomationResponse", "ServerTime" }, new[]{ "Message" }, null, null, null)
           }));
     }
     #endregion
@@ -83,24 +80,12 @@ namespace Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ConnectionRequest(ConnectionRequest other) : this() {
-      sessionToken_ = other.sessionToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ConnectionRequest Clone() {
       return new ConnectionRequest(this);
-    }
-
-    /// <summary>Field number for the "sessionToken" field.</summary>
-    public const int SessionTokenFieldNumber = 1;
-    private string sessionToken_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string SessionToken {
-      get { return sessionToken_; }
-      set {
-        sessionToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -116,14 +101,12 @@ namespace Proto.Game {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SessionToken != other.SessionToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (SessionToken.Length != 0) hash ^= SessionToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -140,10 +123,6 @@ namespace Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SessionToken.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(SessionToken);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -153,10 +132,6 @@ namespace Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SessionToken.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(SessionToken);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -166,9 +141,6 @@ namespace Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (SessionToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionToken);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -179,9 +151,6 @@ namespace Proto.Game {
     public void MergeFrom(ConnectionRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.SessionToken.Length != 0) {
-        SessionToken = other.SessionToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,10 +166,6 @@ namespace Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            SessionToken = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -215,10 +180,6 @@ namespace Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            SessionToken = input.ReadString();
-            break;
-          }
         }
       }
     }
@@ -427,10 +388,12 @@ namespace Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GameDataRequest(GameDataRequest other) : this() {
-      sessionToken_ = other.sessionToken_;
       switch (other.MessageCase) {
         case MessageOneofCase.CharacterUpdate:
           CharacterUpdate = other.CharacterUpdate.Clone();
+          break;
+        case MessageOneofCase.MatchInfomationRequest:
+          MatchInfomationRequest = other.MatchInfomationRequest.Clone();
           break;
       }
 
@@ -442,19 +405,8 @@ namespace Proto.Game {
       return new GameDataRequest(this);
     }
 
-    /// <summary>Field number for the "sessionToken" field.</summary>
-    public const int SessionTokenFieldNumber = 1;
-    private string sessionToken_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string SessionToken {
-      get { return sessionToken_; }
-      set {
-        sessionToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "character_update" field.</summary>
-    public const int CharacterUpdateFieldNumber = 2;
+    public const int CharacterUpdateFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Proto.Game.Character CharacterUpdate {
       get { return messageCase_ == MessageOneofCase.CharacterUpdate ? (global::Proto.Game.Character) message_ : null; }
@@ -464,11 +416,23 @@ namespace Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "match_infomation_request" field.</summary>
+    public const int MatchInfomationRequestFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Proto.Game.MatchInfomationRequest MatchInfomationRequest {
+      get { return messageCase_ == MessageOneofCase.MatchInfomationRequest ? (global::Proto.Game.MatchInfomationRequest) message_ : null; }
+      set {
+        message_ = value;
+        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.MatchInfomationRequest;
+      }
+    }
+
     private object message_;
     /// <summary>Enum of possible cases for the "message" oneof.</summary>
     public enum MessageOneofCase {
       None = 0,
-      CharacterUpdate = 2,
+      CharacterUpdate = 1,
+      MatchInfomationRequest = 2,
     }
     private MessageOneofCase messageCase_ = MessageOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -495,8 +459,8 @@ namespace Proto.Game {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SessionToken != other.SessionToken) return false;
       if (!object.Equals(CharacterUpdate, other.CharacterUpdate)) return false;
+      if (!object.Equals(MatchInfomationRequest, other.MatchInfomationRequest)) return false;
       if (MessageCase != other.MessageCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -504,8 +468,8 @@ namespace Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (SessionToken.Length != 0) hash ^= SessionToken.GetHashCode();
       if (messageCase_ == MessageOneofCase.CharacterUpdate) hash ^= CharacterUpdate.GetHashCode();
+      if (messageCase_ == MessageOneofCase.MatchInfomationRequest) hash ^= MatchInfomationRequest.GetHashCode();
       hash ^= (int) messageCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -523,13 +487,13 @@ namespace Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SessionToken.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(SessionToken);
-      }
       if (messageCase_ == MessageOneofCase.CharacterUpdate) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(CharacterUpdate);
+      }
+      if (messageCase_ == MessageOneofCase.MatchInfomationRequest) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MatchInfomationRequest);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -540,13 +504,13 @@ namespace Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SessionToken.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(SessionToken);
-      }
       if (messageCase_ == MessageOneofCase.CharacterUpdate) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(CharacterUpdate);
+      }
+      if (messageCase_ == MessageOneofCase.MatchInfomationRequest) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MatchInfomationRequest);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -557,11 +521,11 @@ namespace Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (SessionToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionToken);
-      }
       if (messageCase_ == MessageOneofCase.CharacterUpdate) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CharacterUpdate);
+      }
+      if (messageCase_ == MessageOneofCase.MatchInfomationRequest) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MatchInfomationRequest);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -574,15 +538,18 @@ namespace Proto.Game {
       if (other == null) {
         return;
       }
-      if (other.SessionToken.Length != 0) {
-        SessionToken = other.SessionToken;
-      }
       switch (other.MessageCase) {
         case MessageOneofCase.CharacterUpdate:
           if (CharacterUpdate == null) {
             CharacterUpdate = new global::Proto.Game.Character();
           }
           CharacterUpdate.MergeFrom(other.CharacterUpdate);
+          break;
+        case MessageOneofCase.MatchInfomationRequest:
+          if (MatchInfomationRequest == null) {
+            MatchInfomationRequest = new global::Proto.Game.MatchInfomationRequest();
+          }
+          MatchInfomationRequest.MergeFrom(other.MatchInfomationRequest);
           break;
       }
 
@@ -601,16 +568,21 @@ namespace Proto.Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            SessionToken = input.ReadString();
-            break;
-          }
-          case 18: {
             global::Proto.Game.Character subBuilder = new global::Proto.Game.Character();
             if (messageCase_ == MessageOneofCase.CharacterUpdate) {
               subBuilder.MergeFrom(CharacterUpdate);
             }
             input.ReadMessage(subBuilder);
             CharacterUpdate = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Proto.Game.MatchInfomationRequest subBuilder = new global::Proto.Game.MatchInfomationRequest();
+            if (messageCase_ == MessageOneofCase.MatchInfomationRequest) {
+              subBuilder.MergeFrom(MatchInfomationRequest);
+            }
+            input.ReadMessage(subBuilder);
+            MatchInfomationRequest = subBuilder;
             break;
           }
         }
@@ -628,16 +600,21 @@ namespace Proto.Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            SessionToken = input.ReadString();
-            break;
-          }
-          case 18: {
             global::Proto.Game.Character subBuilder = new global::Proto.Game.Character();
             if (messageCase_ == MessageOneofCase.CharacterUpdate) {
               subBuilder.MergeFrom(CharacterUpdate);
             }
             input.ReadMessage(subBuilder);
             CharacterUpdate = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Proto.Game.MatchInfomationRequest subBuilder = new global::Proto.Game.MatchInfomationRequest();
+            if (messageCase_ == MessageOneofCase.MatchInfomationRequest) {
+              subBuilder.MergeFrom(MatchInfomationRequest);
+            }
+            input.ReadMessage(subBuilder);
+            MatchInfomationRequest = subBuilder;
             break;
           }
         }
@@ -681,6 +658,9 @@ namespace Proto.Game {
         case MessageOneofCase.CharacterDatas:
           CharacterDatas = other.CharacterDatas.Clone();
           break;
+        case MessageOneofCase.MatchInfomationResponse:
+          MatchInfomationResponse = other.MatchInfomationResponse.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -702,8 +682,19 @@ namespace Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "match_infomation_response" field.</summary>
+    public const int MatchInfomationResponseFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Proto.Game.MatchInfomationResponse MatchInfomationResponse {
+      get { return messageCase_ == MessageOneofCase.MatchInfomationResponse ? (global::Proto.Game.MatchInfomationResponse) message_ : null; }
+      set {
+        message_ = value;
+        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.MatchInfomationResponse;
+      }
+    }
+
     /// <summary>Field number for the "server_time" field.</summary>
-    public const int ServerTimeFieldNumber = 2;
+    public const int ServerTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp serverTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ServerTime {
@@ -718,6 +709,7 @@ namespace Proto.Game {
     public enum MessageOneofCase {
       None = 0,
       CharacterDatas = 1,
+      MatchInfomationResponse = 2,
     }
     private MessageOneofCase messageCase_ = MessageOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -745,6 +737,7 @@ namespace Proto.Game {
         return true;
       }
       if (!object.Equals(CharacterDatas, other.CharacterDatas)) return false;
+      if (!object.Equals(MatchInfomationResponse, other.MatchInfomationResponse)) return false;
       if (!object.Equals(ServerTime, other.ServerTime)) return false;
       if (MessageCase != other.MessageCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -754,6 +747,7 @@ namespace Proto.Game {
     public override int GetHashCode() {
       int hash = 1;
       if (messageCase_ == MessageOneofCase.CharacterDatas) hash ^= CharacterDatas.GetHashCode();
+      if (messageCase_ == MessageOneofCase.MatchInfomationResponse) hash ^= MatchInfomationResponse.GetHashCode();
       if (serverTime_ != null) hash ^= ServerTime.GetHashCode();
       hash ^= (int) messageCase_;
       if (_unknownFields != null) {
@@ -776,8 +770,12 @@ namespace Proto.Game {
         output.WriteRawTag(10);
         output.WriteMessage(CharacterDatas);
       }
-      if (serverTime_ != null) {
+      if (messageCase_ == MessageOneofCase.MatchInfomationResponse) {
         output.WriteRawTag(18);
+        output.WriteMessage(MatchInfomationResponse);
+      }
+      if (serverTime_ != null) {
+        output.WriteRawTag(26);
         output.WriteMessage(ServerTime);
       }
       if (_unknownFields != null) {
@@ -793,8 +791,12 @@ namespace Proto.Game {
         output.WriteRawTag(10);
         output.WriteMessage(CharacterDatas);
       }
-      if (serverTime_ != null) {
+      if (messageCase_ == MessageOneofCase.MatchInfomationResponse) {
         output.WriteRawTag(18);
+        output.WriteMessage(MatchInfomationResponse);
+      }
+      if (serverTime_ != null) {
+        output.WriteRawTag(26);
         output.WriteMessage(ServerTime);
       }
       if (_unknownFields != null) {
@@ -808,6 +810,9 @@ namespace Proto.Game {
       int size = 0;
       if (messageCase_ == MessageOneofCase.CharacterDatas) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CharacterDatas);
+      }
+      if (messageCase_ == MessageOneofCase.MatchInfomationResponse) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MatchInfomationResponse);
       }
       if (serverTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServerTime);
@@ -836,6 +841,12 @@ namespace Proto.Game {
           }
           CharacterDatas.MergeFrom(other.CharacterDatas);
           break;
+        case MessageOneofCase.MatchInfomationResponse:
+          if (MatchInfomationResponse == null) {
+            MatchInfomationResponse = new global::Proto.Game.MatchInfomationResponse();
+          }
+          MatchInfomationResponse.MergeFrom(other.MatchInfomationResponse);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -862,6 +873,15 @@ namespace Proto.Game {
             break;
           }
           case 18: {
+            global::Proto.Game.MatchInfomationResponse subBuilder = new global::Proto.Game.MatchInfomationResponse();
+            if (messageCase_ == MessageOneofCase.MatchInfomationResponse) {
+              subBuilder.MergeFrom(MatchInfomationResponse);
+            }
+            input.ReadMessage(subBuilder);
+            MatchInfomationResponse = subBuilder;
+            break;
+          }
+          case 26: {
             if (serverTime_ == null) {
               ServerTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
@@ -892,6 +912,15 @@ namespace Proto.Game {
             break;
           }
           case 18: {
+            global::Proto.Game.MatchInfomationResponse subBuilder = new global::Proto.Game.MatchInfomationResponse();
+            if (messageCase_ == MessageOneofCase.MatchInfomationResponse) {
+              subBuilder.MergeFrom(MatchInfomationResponse);
+            }
+            input.ReadMessage(subBuilder);
+            MatchInfomationResponse = subBuilder;
+            break;
+          }
+          case 26: {
             if (serverTime_ == null) {
               ServerTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }

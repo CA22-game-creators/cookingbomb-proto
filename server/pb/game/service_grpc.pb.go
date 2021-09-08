@@ -18,8 +18,6 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type GameServicesClient interface {
-	Connect(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error)
-	Disconnect(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error)
 	GetConnectionStatus(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error)
 	GameDataStream(ctx context.Context, opts ...grpc.CallOption) (GameServices_GameDataStreamClient, error)
 }
@@ -30,24 +28,6 @@ type gameServicesClient struct {
 
 func NewGameServicesClient(cc grpc.ClientConnInterface) GameServicesClient {
 	return &gameServicesClient{cc}
-}
-
-func (c *gameServicesClient) Connect(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error) {
-	out := new(ConnectionResponse)
-	err := c.cc.Invoke(ctx, "/proto.GameServices/Connect", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *gameServicesClient) Disconnect(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error) {
-	out := new(ConnectionResponse)
-	err := c.cc.Invoke(ctx, "/proto.GameServices/Disconnect", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
 }
 
 func (c *gameServicesClient) GetConnectionStatus(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error) {
@@ -94,8 +74,6 @@ func (x *gameServicesGameDataStreamClient) Recv() (*GameDataResponse, error) {
 // All implementations should embed UnimplementedGameServicesServer
 // for forward compatibility
 type GameServicesServer interface {
-	Connect(context.Context, *ConnectionRequest) (*ConnectionResponse, error)
-	Disconnect(context.Context, *ConnectionRequest) (*ConnectionResponse, error)
 	GetConnectionStatus(context.Context, *ConnectionRequest) (*ConnectionResponse, error)
 	GameDataStream(GameServices_GameDataStreamServer) error
 }
@@ -104,12 +82,6 @@ type GameServicesServer interface {
 type UnimplementedGameServicesServer struct {
 }
 
-func (UnimplementedGameServicesServer) Connect(context.Context, *ConnectionRequest) (*ConnectionResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Connect not implemented")
-}
-func (UnimplementedGameServicesServer) Disconnect(context.Context, *ConnectionRequest) (*ConnectionResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Disconnect not implemented")
-}
 func (UnimplementedGameServicesServer) GetConnectionStatus(context.Context, *ConnectionRequest) (*ConnectionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConnectionStatus not implemented")
 }
@@ -126,42 +98,6 @@ type UnsafeGameServicesServer interface {
 
 func RegisterGameServicesServer(s grpc.ServiceRegistrar, srv GameServicesServer) {
 	s.RegisterService(&GameServices_ServiceDesc, srv)
-}
-
-func _GameServices_Connect_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ConnectionRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(GameServicesServer).Connect(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.GameServices/Connect",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GameServicesServer).Connect(ctx, req.(*ConnectionRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _GameServices_Disconnect_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ConnectionRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(GameServicesServer).Disconnect(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.GameServices/Disconnect",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GameServicesServer).Disconnect(ctx, req.(*ConnectionRequest))
-	}
-	return interceptor(ctx, in, info, handler)
 }
 
 func _GameServices_GetConnectionStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -215,14 +151,6 @@ var GameServices_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "proto.GameServices",
 	HandlerType: (*GameServicesServer)(nil),
 	Methods: []grpc.MethodDesc{
-		{
-			MethodName: "Connect",
-			Handler:    _GameServices_Connect_Handler,
-		},
-		{
-			MethodName: "Disconnect",
-			Handler:    _GameServices_Disconnect_Handler,
-		},
 		{
 			MethodName: "GetConnectionStatus",
 			Handler:    _GameServices_GetConnectionStatus_Handler,

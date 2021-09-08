@@ -19,7 +19,7 @@ enum ConnectionStatusEnum {
 }
 
 message Characters {
-  repeated Character characters= 1;
+  repeated Character characters = 1;
 }
 
 message Character {
@@ -28,7 +28,13 @@ message Character {
 
   Position position = 3;
   Rotation rotation = 4;
-  Verocity verocity = 5;
+  Velocity velocity = 5;
+  KeyInput key_input = 6;
 
-  google.protobuf.Timestamp update_time = 6;
+  google.protobuf.Timestamp update_time = 7;
+}
+
+message MatchInfomationRequest{}
+message MatchInfomationResponse{
+  repeated MatchAccountInfo accounts = 1;
 }
