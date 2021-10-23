@@ -10,6 +10,10 @@ message MatchRequest {
     regexp : "^([0-9A-Z]{26})$",
     message : "ユーザーIDが不正な形式です"
   } ];
+  string sessionToken = 2 [ (opts) = {
+    regexp : "^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$",
+    message : "sessionTokenが不正な形式です"
+  } ];
 }
 
 message MatchResponse {
