@@ -18,4 +18,5 @@ message MatchResponse {
   int32 waitingCount = 2;
   string address = 3;
   int32 port = 4;
+  int32 no = 5;
 }
