@@ -6,35 +6,11 @@ package proto;
 import "google/protobuf/timestamp.proto";
 import "proto/game/structure.proto";
 
-enum ConnectionStatusEnum {
-  CONNECTION_UNSPECIFIED    = 0;  //初期値 正常でない値 接続できていないと考えて良い
-  CONNECTING                = 1;  //接続を試行中
-  CONNECTED                 = 2;  //接続済み 各種APIにアクセスする準備が整っている
-
-  DISCONNECTED_BY_CLIENT    = 3;  //クライアント側からの要求によって、切断された
-  DISCONNECTED_BY_SERVER    = 4;  //ゲーム終了等の理由により、サーバー側から切断された
-  DISCONNECTED              = 5;  //上記以外の理由により、切断された
-
-  CONNECTION_FAIL           = 6;  //CONNECTINGから遷移する 接続要求は失敗した
-}
-
-message Characters {
-  repeated Character characters = 1;
-}
-
 message Character {
   string id = 1;
-  bool is_active = 2;
-
-  Position position = 3;
-  Rotation rotation = 4;
-  Velocity velocity = 5;
-  KeyInput key_input = 6;
-
-  google.protobuf.Timestamp update_time = 7;
-}
-
-message MatchInfomationRequest{}
-message MatchInfomationResponse{
-  repeated MatchAccountInfo accounts = 1;
+  Position position = 2;
+  Rotation rotation = 3;
+  Velocity velocity = 4;
+  KeyInput key_input = 5;
+  google.protobuf.Timestamp update_time = 6;
 }

@@ -18,7 +18,6 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type GameServicesClient interface {
-	GetConnectionStatus(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error)
 	GameDataStream(ctx context.Context, opts ...grpc.CallOption) (GameServices_GameDataStreamClient, error)
 }
 
@@ -28,15 +27,6 @@ type gameServicesClient struct {
 
 func NewGameServicesClient(cc grpc.ClientConnInterface) GameServicesClient {
 	return &gameServicesClient{cc}
-}
-
-func (c *gameServicesClient) GetConnectionStatus(ctx context.Context, in *ConnectionRequest, opts ...grpc.CallOption) (*ConnectionResponse, error) {
-	out := new(ConnectionResponse)
-	err := c.cc.Invoke(ctx, "/proto.GameServices/GetConnectionStatus", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
 }
 
 func (c *gameServicesClient) GameDataStream(ctx context.Context, opts ...grpc.CallOption) (GameServices_GameDataStreamClient, error) {
@@ -74,7 +64,6 @@ func (x *gameServicesGameDataStreamClient) Recv() (*GameDataResponse, error) {
 // All implementations should embed UnimplementedGameServicesServer
 // for forward compatibility
 type GameServicesServer interface {
-	GetConnectionStatus(context.Context, *ConnectionRequest) (*ConnectionResponse, error)
 	GameDataStream(GameServices_GameDataStreamServer) error
 }
 
@@ -82,9 +71,6 @@ type GameServicesServer interface {
 type UnimplementedGameServicesServer struct {
 }
 
-func (UnimplementedGameServicesServer) GetConnectionStatus(context.Context, *ConnectionRequest) (*ConnectionResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetConnectionStatus not implemented")
-}
 func (UnimplementedGameServicesServer) GameDataStream(GameServices_GameDataStreamServer) error {
 	return status.Errorf(codes.Unimplemented, "method GameDataStream not implemented")
 }
@@ -98,24 +84,6 @@ type UnsafeGameServicesServer interface {
 
 func RegisterGameServicesServer(s grpc.ServiceRegistrar, srv GameServicesServer) {
 	s.RegisterService(&GameServices_ServiceDesc, srv)
-}
-
-func _GameServices_GetConnectionStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ConnectionRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(GameServicesServer).GetConnectionStatus(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.GameServices/GetConnectionStatus",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GameServicesServer).GetConnectionStatus(ctx, req.(*ConnectionRequest))
-	}
-	return interceptor(ctx, in, info, handler)
 }
 
 func _GameServices_GameDataStream_Handler(srv interface{}, stream grpc.ServerStream) error {
@@ -150,12 +118,7 @@ func (x *gameServicesGameDataStreamServer) Recv() (*GameDataRequest, error) {
 var GameServices_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "proto.GameServices",
 	HandlerType: (*GameServicesServer)(nil),
-	Methods: []grpc.MethodDesc{
-		{
-			MethodName: "GetConnectionStatus",
-			Handler:    _GameServices_GetConnectionStatus_Handler,
-		},
-	},
+	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
 		{
 			StreamName:    "GameDataStream",

@@ -6,7 +6,5 @@ package proto;
 import "proto/game/message.proto";
 
 service GameServices {
-  rpc GetConnectionStatus(ConnectionRequest) returns (ConnectionResponse);
-
   rpc GameDataStream(stream GameDataRequest) returns (stream GameDataResponse);
 }
