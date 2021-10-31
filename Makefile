@@ -39,7 +39,7 @@ setup-match-server:
 	protoc \
 	--go_out=./server/pb/match \
 	--go_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/match \
-	--go_opt=Mproto/common/option.proto=github.com/CA22-game-creators/cookingbomb-proto/server/pb/common \
+	--go_opt=Mproto/api/model.proto=github.com/CA22-game-creators/cookingbomb-proto/server/pb/api \
 	--go-grpc_out=./server/pb/match \
 	--go-grpc_opt=require_unimplemented_servers=false \
 	--go-grpc_opt=module=github.com/CA22-game-creators/cookingbomb-proto/proto/match \

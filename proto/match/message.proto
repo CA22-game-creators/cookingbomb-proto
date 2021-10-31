@@ -3,20 +3,18 @@ option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto/match
 option csharp_namespace = "Proto.Match";
 package proto;
 
-import "proto/common/option.proto";
+import "proto/api/model.proto";
 
 // +session-token
-message MatchRequest {
-  string userId = 1 [ (opts) = {
-    regexp : "^([0-9A-Z]{26})$",
-    message : "ユーザーIDが不正な形式です"
-  } ];
-}
+message MatchRequest {}
 
 message MatchResponse {
+  // 待機中
   int32 waitTime = 1;
   int32 waitingCount = 2;
+  // サーバー割り当て・参加者一覧
   string address = 3;
   int32 port = 4;
   int32 no = 5;
+  repeated Account users = 6;
 }

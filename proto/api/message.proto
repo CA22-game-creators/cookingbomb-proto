@@ -12,9 +12,8 @@ message SignupRequest {
     message : "ユーザー名は半角英数字か日本語の1-10文字である必要があります"
   } ];
 }
-
 message SignupResponse {
-  AccountInfo accountInfo = 1;
+  Account account = 1;
   string authToken = 2;
 }
 
@@ -28,14 +27,8 @@ message GetSessionTokenRequest {
     message : "authTokenが不正な形式です"
   } ];
 }
-
 message GetSessionTokenResponse { string sessionToken = 1; }
 
-message GetAccountInfoRequest {
-  string sessionToken = 1 [ (opts) = {
-    regexp : "^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$",
-    message : "sessionTokenが不正な形式です"
-  } ];
-}
-
-message GetAccountInfoResponse { AccountInfo accountInfo = 1; }
+// +session-token
+message GetAccountInfoRequest {}
+message GetAccountInfoResponse { Account account = 1; }

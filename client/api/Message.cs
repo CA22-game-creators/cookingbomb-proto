@@ -30,30 +30,27 @@ namespace Proto.Api {
             "77yZYS16QS1a44GBLeOCk+OCoS3jg7bvvaYt776f5LiALem+oF17MSwxMH0p",
             "JBJY44Om44O844K244O85ZCN44Gv5Y2K6KeS6Iux5pWw5a2X44GL5pel5pys",
             "6Kqe44GuMS0xMOaWh+Wtl+OBp+OBguOCi+W/heimgeOBjOOBguOCiuOBvuOB",
-            "mSJMCg5TaWdudXBSZXNwb25zZRInCgthY2NvdW50SW5mbxgBIAEoCzISLnBy",
-            "b3RvLkFjY291bnRJbmZvEhEKCWF1dGhUb2tlbhgCIAEoCSLmAQoWR2V0U2Vz",
-            "c2lvblRva2VuUmVxdWVzdBJOCgZ1c2VySWQYASABKAlCPoK1GDoKEF4oWzAt",
-            "OUEtWl17MjZ9KSQSJuODpuODvOOCtuODvElE44GM5LiN5q2j44Gq5b2i5byP",
-            "44Gn44GZEnwKCWF1dGhUb2tlbhgCIAEoCUJpgrUYZQpAXihbMC05YS1mXXs4",
-            "fS1bMC05YS1mXXs0fS1bMC05YS1mXXs0fS1bMC05YS1mXXs0fS1bMC05YS1m",
-            "XXsxMn0pJBIhYXV0aFRva2Vu44GM5LiN5q2j44Gq5b2i5byP44Gn44GZIi8K",
-            "F0dldFNlc3Npb25Ub2tlblJlc3BvbnNlEhQKDHNlc3Npb25Ub2tlbhgBIAEo",
-            "CSKcAQoVR2V0QWNjb3VudEluZm9SZXF1ZXN0EoIBCgxzZXNzaW9uVG9rZW4Y",
-            "ASABKAlCbIK1GGgKQF4oWzAtOWEtZl17OH0tWzAtOWEtZl17NH0tWzAtOWEt",
-            "Zl17NH0tWzAtOWEtZl17NH0tWzAtOWEtZl17MTJ9KSQSJHNlc3Npb25Ub2tl",
-            "buOBjOS4jeato+OBquW9ouW8j+OBp+OBmSJBChZHZXRBY2NvdW50SW5mb1Jl",
-            "c3BvbnNlEicKC2FjY291bnRJbmZvGAEgASgLMhIucHJvdG8uQWNjb3VudElu",
-            "Zm9CR1o5Z2l0aHViLmNvbS9DQTIyLWdhbWUtY3JlYXRvcnMvY29va2luZ2Jv",
-            "bWItcHJvdG8vcHJvdG8vYXBpqgIJUHJvdG8uQXBpYgZwcm90bzM="));
+            "mSJECg5TaWdudXBSZXNwb25zZRIfCgdhY2NvdW50GAEgASgLMg4ucHJvdG8u",
+            "QWNjb3VudBIRCglhdXRoVG9rZW4YAiABKAki5gEKFkdldFNlc3Npb25Ub2tl",
+            "blJlcXVlc3QSTgoGdXNlcklkGAEgASgJQj6CtRg6ChBeKFswLTlBLVpdezI2",
+            "fSkkEibjg6bjg7zjgrbjg7xJROOBjOS4jeato+OBquW9ouW8j+OBp+OBmRJ8",
+            "CglhdXRoVG9rZW4YAiABKAlCaYK1GGUKQF4oWzAtOWEtZl17OH0tWzAtOWEt",
+            "Zl17NH0tWzAtOWEtZl17NH0tWzAtOWEtZl17NH0tWzAtOWEtZl17MTJ9KSQS",
+            "IWF1dGhUb2tlbuOBjOS4jeato+OBquW9ouW8j+OBp+OBmSIvChdHZXRTZXNz",
+            "aW9uVG9rZW5SZXNwb25zZRIUCgxzZXNzaW9uVG9rZW4YASABKAkiFwoVR2V0",
+            "QWNjb3VudEluZm9SZXF1ZXN0IjkKFkdldEFjY291bnRJbmZvUmVzcG9uc2US",
+            "HwoHYWNjb3VudBgBIAEoCzIOLnByb3RvLkFjY291bnRCR1o5Z2l0aHViLmNv",
+            "bS9DQTIyLWdhbWUtY3JlYXRvcnMvY29va2luZ2JvbWItcHJvdG8vcHJvdG8v",
+            "YXBpqgIJUHJvdG8uQXBpYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Proto.Api.ModelReflection.Descriptor, global::Proto.Common.OptionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.SignupRequest), global::Proto.Api.SignupRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.SignupResponse), global::Proto.Api.SignupResponse.Parser, new[]{ "AccountInfo", "AuthToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.SignupResponse), global::Proto.Api.SignupResponse.Parser, new[]{ "Account", "AuthToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.GetSessionTokenRequest), global::Proto.Api.GetSessionTokenRequest.Parser, new[]{ "UserId", "AuthToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.GetSessionTokenResponse), global::Proto.Api.GetSessionTokenResponse.Parser, new[]{ "SessionToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.GetAccountInfoRequest), global::Proto.Api.GetAccountInfoRequest.Parser, new[]{ "SessionToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.GetAccountInfoResponse), global::Proto.Api.GetAccountInfoResponse.Parser, new[]{ "AccountInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.GetAccountInfoRequest), global::Proto.Api.GetAccountInfoRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Api.GetAccountInfoResponse), global::Proto.Api.GetAccountInfoResponse.Parser, new[]{ "Account" }, null, null, null, null)
           }));
     }
     #endregion
@@ -68,19 +65,23 @@ namespace Proto.Api {
     private static readonly pb::MessageParser<SignupRequest> _parser = new pb::MessageParser<SignupRequest>(() => new SignupRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SignupRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SignupRequest() {
       OnConstruction();
     }
@@ -88,12 +89,14 @@ namespace Proto.Api {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SignupRequest(SignupRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SignupRequest Clone() {
       return new SignupRequest(this);
     }
@@ -102,6 +105,7 @@ namespace Proto.Api {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -110,11 +114,13 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SignupRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SignupRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -127,6 +133,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -137,11 +144,13 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -158,6 +167,7 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -170,6 +180,7 @@ namespace Proto.Api {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -182,6 +193,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SignupRequest other) {
       if (other == null) {
         return;
@@ -193,6 +205,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -214,6 +227,7 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -240,19 +254,23 @@ namespace Proto.Api {
     private static readonly pb::MessageParser<SignupResponse> _parser = new pb::MessageParser<SignupResponse>(() => new SignupResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SignupResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SignupResponse() {
       OnConstruction();
     }
@@ -260,25 +278,28 @@ namespace Proto.Api {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SignupResponse(SignupResponse other) : this() {
-      accountInfo_ = other.accountInfo_ != null ? other.accountInfo_.Clone() : null;
+      account_ = other.account_ != null ? other.account_.Clone() : null;
       authToken_ = other.authToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SignupResponse Clone() {
       return new SignupResponse(this);
     }
 
-    /// <summary>Field number for the "accountInfo" field.</summary>
-    public const int AccountInfoFieldNumber = 1;
-    private global::Proto.Api.AccountInfo accountInfo_;
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 1;
+    private global::Proto.Api.Account account_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.Api.AccountInfo AccountInfo {
-      get { return accountInfo_; }
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Proto.Api.Account Account {
+      get { return account_; }
       set {
-        accountInfo_ = value;
+        account_ = value;
       }
     }
 
@@ -286,6 +307,7 @@ namespace Proto.Api {
     public const int AuthTokenFieldNumber = 2;
     private string authToken_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AuthToken {
       get { return authToken_; }
       set {
@@ -294,11 +316,13 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SignupResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SignupResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -306,15 +330,16 @@ namespace Proto.Api {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(AccountInfo, other.AccountInfo)) return false;
+      if (!object.Equals(Account, other.Account)) return false;
       if (AuthToken != other.AuthToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (accountInfo_ != null) hash ^= AccountInfo.GetHashCode();
+      if (account_ != null) hash ^= Account.GetHashCode();
       if (AuthToken.Length != 0) hash ^= AuthToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -323,18 +348,20 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (accountInfo_ != null) {
+      if (account_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(AccountInfo);
+        output.WriteMessage(Account);
       }
       if (AuthToken.Length != 0) {
         output.WriteRawTag(18);
@@ -348,10 +375,11 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (accountInfo_ != null) {
+      if (account_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(AccountInfo);
+        output.WriteMessage(Account);
       }
       if (AuthToken.Length != 0) {
         output.WriteRawTag(18);
@@ -364,10 +392,11 @@ namespace Proto.Api {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (accountInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccountInfo);
+      if (account_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
       }
       if (AuthToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthToken);
@@ -379,15 +408,16 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SignupResponse other) {
       if (other == null) {
         return;
       }
-      if (other.accountInfo_ != null) {
-        if (accountInfo_ == null) {
-          AccountInfo = new global::Proto.Api.AccountInfo();
+      if (other.account_ != null) {
+        if (account_ == null) {
+          Account = new global::Proto.Api.Account();
         }
-        AccountInfo.MergeFrom(other.AccountInfo);
+        Account.MergeFrom(other.Account);
       }
       if (other.AuthToken.Length != 0) {
         AuthToken = other.AuthToken;
@@ -396,6 +426,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -407,10 +438,10 @@ namespace Proto.Api {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (accountInfo_ == null) {
-              AccountInfo = new global::Proto.Api.AccountInfo();
+            if (account_ == null) {
+              Account = new global::Proto.Api.Account();
             }
-            input.ReadMessage(AccountInfo);
+            input.ReadMessage(Account);
             break;
           }
           case 18: {
@@ -424,6 +455,7 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -432,10 +464,10 @@ namespace Proto.Api {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (accountInfo_ == null) {
-              AccountInfo = new global::Proto.Api.AccountInfo();
+            if (account_ == null) {
+              Account = new global::Proto.Api.Account();
             }
-            input.ReadMessage(AccountInfo);
+            input.ReadMessage(Account);
             break;
           }
           case 18: {
@@ -457,19 +489,23 @@ namespace Proto.Api {
     private static readonly pb::MessageParser<GetSessionTokenRequest> _parser = new pb::MessageParser<GetSessionTokenRequest>(() => new GetSessionTokenRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetSessionTokenRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSessionTokenRequest() {
       OnConstruction();
     }
@@ -477,6 +513,7 @@ namespace Proto.Api {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSessionTokenRequest(GetSessionTokenRequest other) : this() {
       userId_ = other.userId_;
       authToken_ = other.authToken_;
@@ -484,6 +521,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSessionTokenRequest Clone() {
       return new GetSessionTokenRequest(this);
     }
@@ -492,6 +530,7 @@ namespace Proto.Api {
     public const int UserIdFieldNumber = 1;
     private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserId {
       get { return userId_; }
       set {
@@ -503,6 +542,7 @@ namespace Proto.Api {
     public const int AuthTokenFieldNumber = 2;
     private string authToken_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AuthToken {
       get { return authToken_; }
       set {
@@ -511,11 +551,13 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetSessionTokenRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetSessionTokenRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -529,6 +571,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
@@ -540,11 +583,13 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -565,6 +610,7 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (UserId.Length != 0) {
         output.WriteRawTag(10);
@@ -581,6 +627,7 @@ namespace Proto.Api {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (UserId.Length != 0) {
@@ -596,6 +643,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetSessionTokenRequest other) {
       if (other == null) {
         return;
@@ -610,6 +658,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -635,6 +684,7 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -665,19 +715,23 @@ namespace Proto.Api {
     private static readonly pb::MessageParser<GetSessionTokenResponse> _parser = new pb::MessageParser<GetSessionTokenResponse>(() => new GetSessionTokenResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetSessionTokenResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSessionTokenResponse() {
       OnConstruction();
     }
@@ -685,12 +739,14 @@ namespace Proto.Api {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSessionTokenResponse(GetSessionTokenResponse other) : this() {
       sessionToken_ = other.sessionToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSessionTokenResponse Clone() {
       return new GetSessionTokenResponse(this);
     }
@@ -699,6 +755,7 @@ namespace Proto.Api {
     public const int SessionTokenFieldNumber = 1;
     private string sessionToken_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SessionToken {
       get { return sessionToken_; }
       set {
@@ -707,11 +764,13 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetSessionTokenResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetSessionTokenResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -724,6 +783,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SessionToken.Length != 0) hash ^= SessionToken.GetHashCode();
@@ -734,11 +794,13 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -755,6 +817,7 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SessionToken.Length != 0) {
         output.WriteRawTag(10);
@@ -767,6 +830,7 @@ namespace Proto.Api {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SessionToken.Length != 0) {
@@ -779,6 +843,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetSessionTokenResponse other) {
       if (other == null) {
         return;
@@ -790,6 +855,7 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -811,6 +877,7 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -829,6 +896,9 @@ namespace Proto.Api {
 
   }
 
+  /// <summary>
+  /// +session-token
+  /// </summary>
   public sealed partial class GetAccountInfoRequest : pb::IMessage<GetAccountInfoRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -837,19 +907,23 @@ namespace Proto.Api {
     private static readonly pb::MessageParser<GetAccountInfoRequest> _parser = new pb::MessageParser<GetAccountInfoRequest>(() => new GetAccountInfoRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetAccountInfoRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAccountInfoRequest() {
       OnConstruction();
     }
@@ -857,33 +931,25 @@ namespace Proto.Api {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAccountInfoRequest(GetAccountInfoRequest other) : this() {
-      sessionToken_ = other.sessionToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAccountInfoRequest Clone() {
       return new GetAccountInfoRequest(this);
     }
 
-    /// <summary>Field number for the "sessionToken" field.</summary>
-    public const int SessionTokenFieldNumber = 1;
-    private string sessionToken_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string SessionToken {
-      get { return sessionToken_; }
-      set {
-        sessionToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetAccountInfoRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetAccountInfoRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -891,14 +957,13 @@ namespace Proto.Api {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SessionToken != other.SessionToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SessionToken.Length != 0) hash ^= SessionToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -906,19 +971,17 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SessionToken.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(SessionToken);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -927,11 +990,8 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SessionToken.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(SessionToken);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -939,11 +999,9 @@ namespace Proto.Api {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (SessionToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionToken);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -951,17 +1009,16 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetAccountInfoRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.SessionToken.Length != 0) {
-        SessionToken = other.SessionToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -972,10 +1029,6 @@ namespace Proto.Api {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            SessionToken = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -983,6 +1036,7 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -990,10 +1044,6 @@ namespace Proto.Api {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            SessionToken = input.ReadString();
-            break;
-          }
         }
       }
     }
@@ -1009,19 +1059,23 @@ namespace Proto.Api {
     private static readonly pb::MessageParser<GetAccountInfoResponse> _parser = new pb::MessageParser<GetAccountInfoResponse>(() => new GetAccountInfoResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetAccountInfoResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Proto.Api.MessageReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAccountInfoResponse() {
       OnConstruction();
     }
@@ -1029,33 +1083,38 @@ namespace Proto.Api {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAccountInfoResponse(GetAccountInfoResponse other) : this() {
-      accountInfo_ = other.accountInfo_ != null ? other.accountInfo_.Clone() : null;
+      account_ = other.account_ != null ? other.account_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAccountInfoResponse Clone() {
       return new GetAccountInfoResponse(this);
     }
 
-    /// <summary>Field number for the "accountInfo" field.</summary>
-    public const int AccountInfoFieldNumber = 1;
-    private global::Proto.Api.AccountInfo accountInfo_;
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 1;
+    private global::Proto.Api.Account account_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Proto.Api.AccountInfo AccountInfo {
-      get { return accountInfo_; }
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Proto.Api.Account Account {
+      get { return account_; }
       set {
-        accountInfo_ = value;
+        account_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetAccountInfoResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetAccountInfoResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1063,14 +1122,15 @@ namespace Proto.Api {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(AccountInfo, other.AccountInfo)) return false;
+      if (!object.Equals(Account, other.Account)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (accountInfo_ != null) hash ^= AccountInfo.GetHashCode();
+      if (account_ != null) hash ^= Account.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1078,18 +1138,20 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (accountInfo_ != null) {
+      if (account_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(AccountInfo);
+        output.WriteMessage(Account);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1099,10 +1161,11 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (accountInfo_ != null) {
+      if (account_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(AccountInfo);
+        output.WriteMessage(Account);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1111,10 +1174,11 @@ namespace Proto.Api {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (accountInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccountInfo);
+      if (account_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1123,20 +1187,22 @@ namespace Proto.Api {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetAccountInfoResponse other) {
       if (other == null) {
         return;
       }
-      if (other.accountInfo_ != null) {
-        if (accountInfo_ == null) {
-          AccountInfo = new global::Proto.Api.AccountInfo();
+      if (other.account_ != null) {
+        if (account_ == null) {
+          Account = new global::Proto.Api.Account();
         }
-        AccountInfo.MergeFrom(other.AccountInfo);
+        Account.MergeFrom(other.Account);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1148,10 +1214,10 @@ namespace Proto.Api {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (accountInfo_ == null) {
-              AccountInfo = new global::Proto.Api.AccountInfo();
+            if (account_ == null) {
+              Account = new global::Proto.Api.Account();
             }
-            input.ReadMessage(AccountInfo);
+            input.ReadMessage(Account);
             break;
           }
         }
@@ -1161,6 +1227,7 @@ namespace Proto.Api {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1169,10 +1236,10 @@ namespace Proto.Api {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (accountInfo_ == null) {
-              AccountInfo = new global::Proto.Api.AccountInfo();
+            if (account_ == null) {
+              Account = new global::Proto.Api.Account();
             }
-            input.ReadMessage(AccountInfo);
+            input.ReadMessage(Account);
             break;
           }
         }

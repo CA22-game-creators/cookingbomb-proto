@@ -12,6 +12,7 @@ namespace Proto.Game {
   {
     static readonly string __ServiceName = "proto.GameServices";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -26,11 +27,13 @@ namespace Proto.Game {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -42,18 +45,12 @@ namespace Proto.Game {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
-    static readonly grpc::Marshaller<global::Proto.Game.ConnectionRequest> __Marshaller_proto_ConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Game.ConnectionRequest.Parser));
-    static readonly grpc::Marshaller<global::Proto.Game.ConnectionResponse> __Marshaller_proto_ConnectionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Game.ConnectionResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Proto.Game.GameDataRequest> __Marshaller_proto_GameDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Game.GameDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Proto.Game.GameDataResponse> __Marshaller_proto_GameDataResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.Game.GameDataResponse.Parser));
 
-    static readonly grpc::Method<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse> __Method_GetConnectionStatus = new grpc::Method<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetConnectionStatus",
-        __Marshaller_proto_ConnectionRequest,
-        __Marshaller_proto_ConnectionResponse);
-
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Proto.Game.GameDataRequest, global::Proto.Game.GameDataResponse> __Method_GameDataStream = new grpc::Method<global::Proto.Game.GameDataRequest, global::Proto.Game.GameDataResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
@@ -71,11 +68,7 @@ namespace Proto.Game {
     [grpc::BindServiceMethod(typeof(GameServices), "BindService")]
     public abstract partial class GameServicesBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Proto.Game.ConnectionResponse> GetConnectionStatus(global::Proto.Game.ConnectionRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task GameDataStream(grpc::IAsyncStreamReader<global::Proto.Game.GameDataRequest> requestStream, grpc::IServerStreamWriter<global::Proto.Game.GameDataResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -88,49 +81,40 @@ namespace Proto.Game {
     {
       /// <summary>Creates a new client for GameServices</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public GameServicesClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for GameServices that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public GameServicesClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected GameServicesClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected GameServicesClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
-      public virtual global::Proto.Game.ConnectionResponse GetConnectionStatus(global::Proto.Game.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetConnectionStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual global::Proto.Game.ConnectionResponse GetConnectionStatus(global::Proto.Game.ConnectionRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetConnectionStatus, null, options, request);
-      }
-      public virtual grpc::AsyncUnaryCall<global::Proto.Game.ConnectionResponse> GetConnectionStatusAsync(global::Proto.Game.ConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetConnectionStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual grpc::AsyncUnaryCall<global::Proto.Game.ConnectionResponse> GetConnectionStatusAsync(global::Proto.Game.ConnectionRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetConnectionStatus, null, options, request);
-      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Proto.Game.GameDataRequest, global::Proto.Game.GameDataResponse> GameDataStream(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GameDataStream(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Proto.Game.GameDataRequest, global::Proto.Game.GameDataResponse> GameDataStream(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_GameDataStream, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override GameServicesClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new GameServicesClient(configuration);
@@ -139,10 +123,10 @@ namespace Proto.Game {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(GameServicesBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetConnectionStatus, serviceImpl.GetConnectionStatus)
           .AddMethod(__Method_GameDataStream, serviceImpl.GameDataStream).Build();
     }
 
@@ -150,9 +134,9 @@ namespace Proto.Game {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GameServicesBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetConnectionStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Proto.Game.ConnectionRequest, global::Proto.Game.ConnectionResponse>(serviceImpl.GetConnectionStatus));
       serviceBinder.AddMethod(__Method_GameDataStream, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Proto.Game.GameDataRequest, global::Proto.Game.GameDataResponse>(serviceImpl.GameDataStream));
     }
 

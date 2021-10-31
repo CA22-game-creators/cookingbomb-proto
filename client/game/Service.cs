@@ -25,12 +25,11 @@ namespace Proto.Game {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chhwcm90by9nYW1lL3NlcnZpY2UucHJvdG8SBXByb3RvGhhwcm90by9nYW1l",
-            "L21lc3NhZ2UucHJvdG8yoQEKDEdhbWVTZXJ2aWNlcxJKChNHZXRDb25uZWN0",
-            "aW9uU3RhdHVzEhgucHJvdG8uQ29ubmVjdGlvblJlcXVlc3QaGS5wcm90by5D",
-            "b25uZWN0aW9uUmVzcG9uc2USRQoOR2FtZURhdGFTdHJlYW0SFi5wcm90by5H",
-            "YW1lRGF0YVJlcXVlc3QaFy5wcm90by5HYW1lRGF0YVJlc3BvbnNlKAEwAUJJ",
-            "WjpnaXRodWIuY29tL0NBMjItZ2FtZS1jcmVhdG9ycy9jb29raW5nYm9tYi1w",
-            "cm90by9wcm90by9nYW1lqgIKUHJvdG8uR2FtZWIGcHJvdG8z"));
+            "L21lc3NhZ2UucHJvdG8yVQoMR2FtZVNlcnZpY2VzEkUKDkdhbWVEYXRhU3Ry",
+            "ZWFtEhYucHJvdG8uR2FtZURhdGFSZXF1ZXN0GhcucHJvdG8uR2FtZURhdGFS",
+            "ZXNwb25zZSgBMAFCSVo6Z2l0aHViLmNvbS9DQTIyLWdhbWUtY3JlYXRvcnMv",
+            "Y29va2luZ2JvbWItcHJvdG8vcHJvdG8vZ2FtZaoCClByb3RvLkdhbWViBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Proto.Game.MessageReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, null));

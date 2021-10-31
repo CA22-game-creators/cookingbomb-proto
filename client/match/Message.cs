@@ -24,25 +24,27 @@ namespace Proto.Match {
     static MessageReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chlwcm90by9tYXRjaC9tZXNzYWdlLnByb3RvEgVwcm90bxoZcHJvdG8vY29t",
-            "bW9uL29wdGlvbi5wcm90byJeCgxNYXRjaFJlcXVlc3QSTgoGdXNlcklkGAEg",
-            "ASgJQj6CtRg6ChBeKFswLTlBLVpdezI2fSkkEibjg6bjg7zjgrbjg7xJROOB",
-            "jOS4jeato+OBquW9ouW8j+OBp+OBmSJWCg1NYXRjaFJlc3BvbnNlEhAKCHdh",
-            "aXRUaW1lGAEgASgFEhQKDHdhaXRpbmdDb3VudBgCIAEoBRIPCgdhZGRyZXNz",
-            "GAMgASgJEgwKBHBvcnQYBCABKAVCS1o7Z2l0aHViLmNvbS9DQTIyLWdhbWUt",
-            "Y3JlYXRvcnMvY29va2luZ2JvbWItcHJvdG8vcHJvdG8vbWF0Y2iqAgtQcm90",
-            "by5NYXRjaGIGcHJvdG8z"));
+            "Chlwcm90by9tYXRjaC9tZXNzYWdlLnByb3RvEgVwcm90bxoVcHJvdG8vYXBp",
+            "L21vZGVsLnByb3RvIg4KDE1hdGNoUmVxdWVzdCKBAQoNTWF0Y2hSZXNwb25z",
+            "ZRIQCgh3YWl0VGltZRgBIAEoBRIUCgx3YWl0aW5nQ291bnQYAiABKAUSDwoH",
+            "YWRkcmVzcxgDIAEoCRIMCgRwb3J0GAQgASgFEgoKAm5vGAUgASgFEh0KBXVz",
+            "ZXJzGAYgAygLMg4ucHJvdG8uQWNjb3VudEJLWjtnaXRodWIuY29tL0NBMjIt",
+            "Z2FtZS1jcmVhdG9ycy9jb29raW5nYm9tYi1wcm90by9wcm90by9tYXRjaKoC",
+            "C1Byb3RvLk1hdGNoYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Proto.Common.OptionReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Proto.Api.ModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Match.MatchRequest), global::Proto.Match.MatchRequest.Parser, new[]{ "UserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Match.MatchResponse), global::Proto.Match.MatchResponse.Parser, new[]{ "WaitTime", "WaitingCount", "Address", "Port" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Match.MatchRequest), global::Proto.Match.MatchRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Match.MatchResponse), global::Proto.Match.MatchResponse.Parser, new[]{ "WaitTime", "WaitingCount", "Address", "Port", "No", "Users" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  /// <summary>
+  /// +session-token
+  /// </summary>
   public sealed partial class MatchRequest : pb::IMessage<MatchRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -77,7 +79,6 @@ namespace Proto.Match {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MatchRequest(MatchRequest other) : this() {
-      userId_ = other.userId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,18 +86,6 @@ namespace Proto.Match {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MatchRequest Clone() {
       return new MatchRequest(this);
-    }
-
-    /// <summary>Field number for the "userId" field.</summary>
-    public const int UserIdFieldNumber = 1;
-    private string userId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string UserId {
-      get { return userId_; }
-      set {
-        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -114,7 +103,6 @@ namespace Proto.Match {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (UserId != other.UserId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -122,7 +110,6 @@ namespace Proto.Match {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -141,10 +128,6 @@ namespace Proto.Match {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (UserId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(UserId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -155,10 +138,6 @@ namespace Proto.Match {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (UserId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(UserId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -169,9 +148,6 @@ namespace Proto.Match {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (UserId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -183,9 +159,6 @@ namespace Proto.Match {
     public void MergeFrom(MatchRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.UserId.Length != 0) {
-        UserId = other.UserId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -202,10 +175,6 @@ namespace Proto.Match {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            UserId = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -221,10 +190,6 @@ namespace Proto.Match {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            UserId = input.ReadString();
-            break;
-          }
         }
       }
     }
@@ -270,6 +235,8 @@ namespace Proto.Match {
       waitingCount_ = other.waitingCount_;
       address_ = other.address_;
       port_ = other.port_;
+      no_ = other.no_;
+      users_ = other.users_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -282,6 +249,9 @@ namespace Proto.Match {
     /// <summary>Field number for the "waitTime" field.</summary>
     public const int WaitTimeFieldNumber = 1;
     private int waitTime_;
+    /// <summary>
+    /// 待機中
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int WaitTime {
@@ -306,6 +276,9 @@ namespace Proto.Match {
     /// <summary>Field number for the "address" field.</summary>
     public const int AddressFieldNumber = 3;
     private string address_ = "";
+    /// <summary>
+    /// サーバー割り当て
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Address {
@@ -327,6 +300,32 @@ namespace Proto.Match {
       }
     }
 
+    /// <summary>Field number for the "no" field.</summary>
+    public const int NoFieldNumber = 5;
+    private int no_;
+    /// <summary>
+    /// 一意のプレイヤーNoと参加者一覧
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int No {
+      get { return no_; }
+      set {
+        no_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "users" field.</summary>
+    public const int UsersFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Proto.Api.Account> _repeated_users_codec
+        = pb::FieldCodec.ForMessage(50, global::Proto.Api.Account.Parser);
+    private readonly pbc::RepeatedField<global::Proto.Api.Account> users_ = new pbc::RepeatedField<global::Proto.Api.Account>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Proto.Api.Account> Users {
+      get { return users_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -346,6 +345,8 @@ namespace Proto.Match {
       if (WaitingCount != other.WaitingCount) return false;
       if (Address != other.Address) return false;
       if (Port != other.Port) return false;
+      if (No != other.No) return false;
+      if(!users_.Equals(other.users_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -357,6 +358,8 @@ namespace Proto.Match {
       if (WaitingCount != 0) hash ^= WaitingCount.GetHashCode();
       if (Address.Length != 0) hash ^= Address.GetHashCode();
       if (Port != 0) hash ^= Port.GetHashCode();
+      if (No != 0) hash ^= No.GetHashCode();
+      hash ^= users_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -391,6 +394,11 @@ namespace Proto.Match {
         output.WriteRawTag(32);
         output.WriteInt32(Port);
       }
+      if (No != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(No);
+      }
+      users_.WriteTo(output, _repeated_users_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -417,6 +425,11 @@ namespace Proto.Match {
         output.WriteRawTag(32);
         output.WriteInt32(Port);
       }
+      if (No != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(No);
+      }
+      users_.WriteTo(ref output, _repeated_users_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -439,6 +452,10 @@ namespace Proto.Match {
       if (Port != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
       }
+      if (No != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(No);
+      }
+      size += users_.CalculateSize(_repeated_users_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -463,6 +480,10 @@ namespace Proto.Match {
       if (other.Port != 0) {
         Port = other.Port;
       }
+      if (other.No != 0) {
+        No = other.No;
+      }
+      users_.Add(other.users_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -494,6 +515,14 @@ namespace Proto.Match {
             Port = input.ReadInt32();
             break;
           }
+          case 40: {
+            No = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            users_.AddEntriesFrom(input, _repeated_users_codec);
+            break;
+          }
         }
       }
     #endif
@@ -523,6 +552,14 @@ namespace Proto.Match {
           }
           case 32: {
             Port = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            No = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            users_.AddEntriesFrom(ref input, _repeated_users_codec);
             break;
           }
         }

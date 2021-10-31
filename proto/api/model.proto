@@ -3,7 +3,7 @@ option go_package = "github.com/CA22-game-creators/cookingbomb-proto/proto/api";
 option csharp_namespace = "Proto.Api";
 package proto;
 
-message AccountInfo {
+message Account {
   string id = 1;
   string name = 2;
 }

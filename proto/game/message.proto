@@ -8,7 +8,6 @@ import "proto/game/model.proto";
 
 // +session-token
 message GameDataRequest { Character character = 1; }
-
 message GameDataResponse {
   repeated Character characters = 1;
   google.protobuf.Timestamp server_time = 2;
