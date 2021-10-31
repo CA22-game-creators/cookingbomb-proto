@@ -275,7 +275,7 @@ namespace Proto.Match {
     public const int AddressFieldNumber = 3;
     private string address_ = "";
     /// <summary>
-    /// サーバー割り当て・参加者一覧
+    /// サーバー割り当て・参加者No
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

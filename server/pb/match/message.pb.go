@@ -67,7 +67,7 @@ type MatchResponse struct {
 	// 待機中
 	WaitTime     int32 `protobuf:"varint,1,opt,name=waitTime,proto3" json:"waitTime,omitempty"`
 	WaitingCount int32 `protobuf:"varint,2,opt,name=waitingCount,proto3" json:"waitingCount,omitempty"`
-	// サーバー割り当て・参加者一覧
+	// サーバー割り当て・参加者No
 	Address string `protobuf:"bytes,3,opt,name=address,proto3" json:"address,omitempty"`
 	Port    int32  `protobuf:"varint,4,opt,name=port,proto3" json:"port,omitempty"`
 	No      int32  `protobuf:"varint,5,opt,name=no,proto3" json:"no,omitempty"`

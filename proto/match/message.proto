@@ -10,7 +10,7 @@ message MatchResponse {
   // 待機中
   int32 waitTime = 1;
   int32 waitingCount = 2;
-  // サーバー割り当て・参加者一覧
+  // サーバー割り当て・参加者No
   string address = 3;
   int32 port = 4;
   int32 no = 5;
